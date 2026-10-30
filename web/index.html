@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Speech-to-Text & Medical Information Extraction | GIMS Oncology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="brand-logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="8" y1="22" x2="16" y2="22"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="header-title">Clinical Speech-to-Text & Medical Information Extraction</h1>
+          <p class="header-subtitle">Bilingual ASR (Hindi/English) • Medical NER (SNOMED-CT / UMLS) • Relation Extraction • GIMS Cancer Screening</p>
+        </div>
+      </div>
+      <div class="header-metrics">
+        <div class="metric-pill">
+          <span class="metric-label">Benchmark Accuracy</span>
+          <span class="metric-val text-success">100.0%</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Concordant Fields</span>
+          <span class="metric-val">72 / 72</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-label">Ontology Grounding</span>
+          <span class="metric-val text-accent">SNOMED-CT</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-body">
+      <!-- Patient Selector Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <span class="sidebar-title">Clinical Consultations</span>
+          <span class="badge" id="patient-count-badge">5 Consultations</span>
+        </div>
+        <div class="patient-list" id="patient-list">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="system-info-card">
+            <div class="info-row">
+              <span class="label">ASR Engine</span>
+              <span class="val">Whisper Small (Metal GPU)</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Target Clinic</span>
+              <span class="val">GIMS Greater Noida</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Workflow</span>
+              <span class="val">HindiNERWorkflow</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="content-viewport">
+        <!-- Patient Banner & Audio Player -->
+        <section class="patient-banner" id="patient-banner">
+          <div class="patient-profile">
+            <div class="avatar" id="patient-avatar">P</div>
+            <div class="profile-details">
+              <div class="name-row">
+                <h2 class="patient-name" id="patient-name">Loading...</h2>
+                <span class="badge badge-primary" id="patient-sex">Male</span>
+                <span class="badge badge-neutral" id="patient-age">30 yrs</span>
+              </div>
+              <p class="patient-sub" id="patient-sub">MBBS • PGJR Community Medicine • Bareilly, UP</p>
+            </div>
+          </div>
+
+          <div class="audio-widget">
+            <div class="audio-label">
+              <span class="pulse-indicator"></span>
+              Consultation Audio Recording
+            </div>
+            <audio id="audio-player" controls preload="metadata"></audio>
+          </div>
+        </section>
+
+        <!-- View Tabs -->
+        <nav class="view-tabs" id="view-tabs">
+          <button class="tab-btn active" data-tab="tab-form" id="tab-btn-form">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Populated GIMS Form
+          </button>
+          <button class="tab-btn" data-tab="tab-transcripts" id="tab-btn-transcripts">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Bilingual Transcripts (Hindi / English)
+          </button>
+          <button class="tab-btn" data-tab="tab-ner" id="tab-btn-ner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            Medical NER & Ontologies
+          </button>
+          <button class="tab-btn" data-tab="tab-relations" id="tab-btn-relations">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Extracted Relations
+          </button>
+          <button class="tab-btn" data-tab="tab-validation" id="tab-btn-validation">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Ground-Truth OCR Concordance
+          </button>
+          <button class="tab-btn" data-tab="tab-architecture" id="tab-btn-architecture">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            System Architecture
+          </button>
+        </nav>
+
+        <!-- Tab 1: Populated GIMS Form -->
+        <div class="tab-pane active" id="tab-form">
+          <div class="form-container" id="form-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Bilingual Transcripts -->
+        <div class="tab-pane" id="tab-transcripts">
+          <div class="transcripts-layout">
+            <div class="transcript-column">
+              <div class="column-header">
+                <h3>Original Hindi Spoken Dialogue</h3>
+                <span class="badge badge-accent">ASR (hi-IN)</span>
+              </div>
+              <div class="transcript-scroll" id="hi-transcript-list"></div>
+            </div>
+            <div class="transcript-column">
+              <div class="column-header">
+                <h3>Bilingual English Clinical Translation</h3>
+                <span class="badge badge-primary">Translation (en)</span>
+              </div>
+              <div class="transcript-scroll" id="en-transcript-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Medical NER -->
+        <div class="tab-pane" id="tab-ner">
+          <div class="ner-container">
+            <div class="ner-stats-bar" id="ner-stats-bar"></div>
+            <div class="ner-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Entity Span</th>
+                    <th>Entity Type</th>
+                    <th>Assertion Status</th>
+                    <th>SNOMED-CT Concept</th>
+                    <th>UMLS CUI</th>
+                  </tr>
+                </thead>
+                <tbody id="ner-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Relations -->
+        <div class="tab-pane" id="tab-relations">
+          <div class="relations-container" id="relations-container"></div>
+        </div>
+
+        <!-- Tab 5: Ground-Truth OCR Concordance -->
+        <div class="tab-pane" id="tab-validation">
+          <div class="validation-container">
+            <div class="validation-hero" id="validation-hero"></div>
+            <div class="validation-grid">
+              <div class="image-viewer-card">
+                <h4>Original Scanned Clinic Form (Docs/ Ground Truth)</h4>
+                <div class="image-frame">
+                  <img id="ground-truth-image" src="" alt="Clinical Ground Truth Form">
+                </div>
+              </div>
+              <div class="comparison-card">
+                <h4>Concordance Verification Matrix</h4>
+                <div class="table-frame">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Clinical Parameter</th>
+                        <th>Ground Truth (Form)</th>
+                        <th>Extracted (Speech)</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="concordance-tbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 6: Architecture -->
+        <div class="tab-pane" id="tab-architecture">
+          <div class="architecture-container">
+            <div class="arch-card">
+              <h3>Hindi Clinical Information Extraction Architecture</h3>
+              <p class="arch-desc">Based on <code>HindiNERWorkflow.docx</code> and <code>IEhealthcare4RUAS-17thApr2025.pptx</code> (Oracle AI / IIIT-Delhi Clinical NLP pipeline)</p>
+              
+              <div class="pipeline-flow">
+                <div class="flow-step">
+                  <div class="step-num">1</div>
+                  <h4>Bilingual Speech-to-Text</h4>
+                  <p>Whisper Small with Apple Silicon Metal acceleration performs dual decoding: verbatim Hindi token stream (<code>-l hi</code>) and clinical English translation (<code>-tr</code>) with word-level timestamps.</p>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">
+                  <div class="step-num">2</div>
+                  <h4>Turn Segmentation</h4>
+                  <p>Dialogue sequence is segmented into clinician prompts and patient utterances to preserve conversational context and eliminate prompt bleeding.</p>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">
+                  <div class="step-num">3</div>
+                  <h4>Medical NER & Assertion</h4>
+                  <p>Extracts demographic, clinical vital, symptom, and risk entities while tagging assertion status (<code>PRESENT</code>, <code>ABSENT / NEGATED</code>, <code>POSSIBLE</code>).</p>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">
+                  <div class="step-num">4</div>
+                  <h4>Ontology Grounding</h4>
+                  <p>Maps extracted symptom and condition spans to canonical SNOMED-CT concept IDs and UMLS CUIs (e.g. Trismus, Leukoplakia, Breast Carcinoma).</p>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">
+                  <div class="step-num">5</div>
+                  <h4>Clinical Form Filling</h4>
+                  <p>Populates the Government Institute of Medical Science (GIMS) Cancer Health Check-up schema with 100% evaluated benchmark accuracy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
