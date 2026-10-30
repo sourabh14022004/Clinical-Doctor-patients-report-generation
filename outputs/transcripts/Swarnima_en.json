@@ -1,0 +1,802 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "models/ggml-small.bin",
+		"language": "en",
+		"translate": true
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:05,000"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 5000
+			},
+			"text": " Namaste Ma'am, my name is Dr. Priyanshi Chauhan, I want to ask you a few questions."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,000",
+				"to": "00:00:07,000"
+			},
+			"offsets": {
+				"from": 5000,
+				"to": 7000
+			},
+			"text": " What is your name?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:07,000",
+				"to": "00:00:08,000"
+			},
+			"offsets": {
+				"from": 7000,
+				"to": 8000
+			},
+			"text": " Swaidema."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:08,000",
+				"to": "00:00:09,000"
+			},
+			"offsets": {
+				"from": 8000,
+				"to": 9000
+			},
+			"text": " And what is your age?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,000",
+				"to": "00:00:10,000"
+			},
+			"offsets": {
+				"from": 9000,
+				"to": 10000
+			},
+			"text": " 30."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,000",
+				"to": "00:00:12,000"
+			},
+			"offsets": {
+				"from": 10000,
+				"to": 12000
+			},
+			"text": " And what is your date of birth?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,000",
+				"to": "00:00:14,000"
+			},
+			"offsets": {
+				"from": 12000,
+				"to": 14000
+			},
+			"text": " 35, 1995."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,000",
+				"to": "00:00:16,000"
+			},
+			"offsets": {
+				"from": 14000,
+				"to": 16000
+			},
+			"text": " And where have you studied?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:16,000",
+				"to": "00:00:18,000"
+			},
+			"offsets": {
+				"from": 16000,
+				"to": 18000
+			},
+			"text": " I have done MBBS."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:18,000",
+				"to": "00:00:20,000"
+			},
+			"offsets": {
+				"from": 18000,
+				"to": 20000
+			},
+			"text": " And what are you doing now?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:20,000",
+				"to": "00:00:23,000"
+			},
+			"offsets": {
+				"from": 20000,
+				"to": 23000
+			},
+			"text": " I am PGJR in the community medicine department."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:23,000",
+				"to": "00:00:24,000"
+			},
+			"offsets": {
+				"from": 23000,
+				"to": 24000
+			},
+			"text": " You are married?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:24,000",
+				"to": "00:00:25,000"
+			},
+			"offsets": {
+				"from": 24000,
+				"to": 25000
+			},
+			"text": " Yes."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:25,000",
+				"to": "00:00:27,000"
+			},
+			"offsets": {
+				"from": 25000,
+				"to": 27000
+			},
+			"text": " And what is your address?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,000",
+				"to": "00:00:28,000"
+			},
+			"offsets": {
+				"from": 27000,
+				"to": 28000
+			},
+			"text": " Noida."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,000",
+				"to": "00:00:30,000"
+			},
+			"offsets": {
+				"from": 28000,
+				"to": 30000
+			},
+			"text": " What is your husband's name?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:30,000",
+				"to": "00:00:32,000"
+			},
+			"offsets": {
+				"from": 30000,
+				"to": 32000
+			},
+			"text": " Raja Vashne."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,000",
+				"to": "00:00:34,000"
+			},
+			"offsets": {
+				"from": 32000,
+				"to": 34000
+			},
+			"text": " Will you tell me your phone number?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:34,000",
+				"to": "00:00:41,000"
+			},
+			"offsets": {
+				"from": 34000,
+				"to": 41000
+			},
+			"text": " 9-6-3-4-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,000",
+				"to": "00:00:45,000"
+			},
+			"offsets": {
+				"from": 41000,
+				"to": 45000
+			},
+			"text": " How much is your monthly family income?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:45,000",
+				"to": "00:00:46,000"
+			},
+			"offsets": {
+				"from": 45000,
+				"to": 46000
+			},
+			"text": " In a month."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:46,000",
+				"to": "00:00:47,000"
+			},
+			"offsets": {
+				"from": 46000,
+				"to": 47000
+			},
+			"text": " 2 lakhs."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:47,000",
+				"to": "00:00:58,000"
+			},
+			"offsets": {
+				"from": 47000,
+				"to": 58000
+			},
+			"text": " Do you have any health insurance?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:58,000",
+				"to": "00:00:59,000"
+			},
+			"offsets": {
+				"from": 58000,
+				"to": 59000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:59,000",
+				"to": "00:01:01,000"
+			},
+			"offsets": {
+				"from": 59000,
+				"to": 61000
+			},
+			"text": " How much is your weight?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:01,000",
+				"to": "00:01:02,000"
+			},
+			"offsets": {
+				"from": 61000,
+				"to": 62000
+			},
+			"text": " 64."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:02,000",
+				"to": "00:01:04,000"
+			},
+			"offsets": {
+				"from": 62000,
+				"to": 64000
+			},
+			"text": " And what is your height?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:04,000",
+				"to": "00:01:05,000"
+			},
+			"offsets": {
+				"from": 64000,
+				"to": 65000
+			},
+			"text": " 5."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:05,000",
+				"to": "00:01:07,000"
+			},
+			"offsets": {
+				"from": 65000,
+				"to": 67000
+			},
+			"text": " 2."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:07,000",
+				"to": "00:01:11,000"
+			},
+			"offsets": {
+				"from": 67000,
+				"to": 71000
+			},
+			"text": " Do you have any long disease?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:11,000",
+				"to": "00:01:13,000"
+			},
+			"offsets": {
+				"from": 71000,
+				"to": 73000
+			},
+			"text": " Diabetes, hyperbacteria, B.P."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:13,000",
+				"to": "00:01:14,000"
+			},
+			"offsets": {
+				"from": 73000,
+				"to": 74000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,000",
+				"to": "00:01:15,000"
+			},
+			"offsets": {
+				"from": 74000,
+				"to": 75000
+			},
+			"text": " Any disease?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:15,000",
+				"to": "00:01:21,000"
+			},
+			"offsets": {
+				"from": 75000,
+				"to": 81000
+			},
+			"text": " Have you ever tested any kind of cancer, like breast cancer or oral cancer?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:21,000",
+				"to": "00:01:22,000"
+			},
+			"offsets": {
+				"from": 81000,
+				"to": 82000
+			},
+			"text": " Yes."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:22,000",
+				"to": "00:01:23,000"
+			},
+			"offsets": {
+				"from": 82000,
+				"to": 83000
+			},
+			"text": " What type of cancer?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:23,000",
+				"to": "00:01:24,000"
+			},
+			"offsets": {
+				"from": 83000,
+				"to": 84000
+			},
+			"text": " Survival."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,000",
+				"to": "00:01:31,000"
+			},
+			"offsets": {
+				"from": 84000,
+				"to": 91000
+			},
+			"text": " Is there anyone in your family who has ever had cancer?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:31,000",
+				"to": "00:01:32,000"
+			},
+			"offsets": {
+				"from": 91000,
+				"to": 92000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:32,000",
+				"to": "00:01:36,000"
+			},
+			"offsets": {
+				"from": 92000,
+				"to": 96000
+			},
+			"text": " Have you ever consumed alcohol or tobacco?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:36,000",
+				"to": "00:01:37,000"
+			},
+			"offsets": {
+				"from": 96000,
+				"to": 97000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:37,000",
+				"to": "00:01:49,000"
+			},
+			"offsets": {
+				"from": 97000,
+				"to": 109000
+			},
+			"text": " What type of food do you eat? Vegetarian or fried food?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:49,000",
+				"to": "00:01:50,000"
+			},
+			"offsets": {
+				"from": 109000,
+				"to": 110000
+			},
+			"text": " Vegetarian."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:50,000",
+				"to": "00:01:51,000"
+			},
+			"offsets": {
+				"from": 110000,
+				"to": 111000
+			},
+			"text": " Vegetarian."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:51,000",
+				"to": "00:01:59,000"
+			},
+			"offsets": {
+				"from": 111000,
+				"to": 119000
+			},
+			"text": " Do you exercise daily or sometimes you don't exercise at all?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:59,000",
+				"to": "00:02:00,000"
+			},
+			"offsets": {
+				"from": 119000,
+				"to": 120000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:00,000",
+				"to": "00:02:08,000"
+			},
+			"offsets": {
+				"from": 120000,
+				"to": 128000
+			},
+			"text": " Do you have any questions related to cancer related symptoms?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:08,000",
+				"to": "00:02:11,000"
+			},
+			"offsets": {
+				"from": 128000,
+				"to": 131000
+			},
+			"text": " Do you have anything like this or not?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:11,000",
+				"to": "00:02:15,000"
+			},
+			"offsets": {
+				"from": 131000,
+				"to": 135000
+			},
+			"text": " Have you ever lost weight in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:15,000",
+				"to": "00:02:16,000"
+			},
+			"offsets": {
+				"from": 135000,
+				"to": 136000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:16,000",
+				"to": "00:02:21,000"
+			},
+			"offsets": {
+				"from": 136000,
+				"to": 141000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:21,000",
+				"to": "00:02:22,000"
+			},
+			"offsets": {
+				"from": 141000,
+				"to": 142000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:22,000",
+				"to": "00:02:26,000"
+			},
+			"offsets": {
+				"from": 142000,
+				"to": 146000
+			},
+			"text": " Have you ever had a fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:26,000",
+				"to": "00:02:27,000"
+			},
+			"offsets": {
+				"from": 146000,
+				"to": 147000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:27,000",
+				"to": "00:02:32,000"
+			},
+			"offsets": {
+				"from": 147000,
+				"to": 152000
+			},
+			"text": " Have you ever had a fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:32,000",
+				"to": "00:02:33,000"
+			},
+			"offsets": {
+				"from": 152000,
+				"to": 153000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:33,000",
+				"to": "00:02:39,000"
+			},
+			"offsets": {
+				"from": 153000,
+				"to": 159000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:39,000",
+				"to": "00:02:40,000"
+			},
+			"offsets": {
+				"from": 159000,
+				"to": 160000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:40,000",
+				"to": "00:02:48,000"
+			},
+			"offsets": {
+				"from": 160000,
+				"to": 168000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:48,000",
+				"to": "00:02:49,000"
+			},
+			"offsets": {
+				"from": 168000,
+				"to": 169000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:49,000",
+				"to": "00:02:52,000"
+			},
+			"offsets": {
+				"from": 169000,
+				"to": 172000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:52,000",
+				"to": "00:02:53,000"
+			},
+			"offsets": {
+				"from": 172000,
+				"to": 173000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:53,000",
+				"to": "00:02:58,000"
+			},
+			"offsets": {
+				"from": 173000,
+				"to": 178000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:58,000",
+				"to": "00:02:59,000"
+			},
+			"offsets": {
+				"from": 178000,
+				"to": 179000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:59,000",
+				"to": "00:03:04,000"
+			},
+			"offsets": {
+				"from": 179000,
+				"to": 184000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:04,000",
+				"to": "00:03:05,000"
+			},
+			"offsets": {
+				"from": 184000,
+				"to": 185000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:05,000",
+				"to": "00:03:10,000"
+			},
+			"offsets": {
+				"from": 185000,
+				"to": 190000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:10,000",
+				"to": "00:03:11,000"
+			},
+			"offsets": {
+				"from": 190000,
+				"to": 191000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:11,000",
+				"to": "00:03:15,000"
+			},
+			"offsets": {
+				"from": 191000,
+				"to": 195000
+			},
+			"text": " Have you ever had a long fever or tired in the last 6 months?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:15,000",
+				"to": "00:03:16,000"
+			},
+			"offsets": {
+				"from": 195000,
+				"to": 196000
+			},
+			"text": " No."
+		}
+	]
+}

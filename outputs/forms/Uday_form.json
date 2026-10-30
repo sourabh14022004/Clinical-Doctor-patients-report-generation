@@ -1,0 +1,109 @@
+{
+  "institution": "Government Institute of Medical Science, Greater Noida",
+  "form_title": "Cancer Health Check up",
+  "patient_id": "Uday",
+  "demographics": {
+    "name": "Master's degree",
+    "age": 32,
+    "dob": "N/A",
+    "sex": "Male",
+    "education": "Graduation",
+    "occupation": "Service / Job",
+    "marital_status": "Married",
+    "address": "Mu-2, Greater Noida",
+    "mobile": "9454. 8921. 9",
+    "father_or_husband_name": "'s degree",
+    "monthly_family_income": "25,000 / month",
+    "health_insurance": "No"
+  },
+  "clinical_indicators": {
+    "weight_kg": 78.0,
+    "height": "5' 8\"",
+    "bmi": 26.1,
+    "pulse": "Normal",
+    "rr": "Normal",
+    "bp": "Normal"
+  },
+  "history": {
+    "past_medical_history": {
+      "present": false,
+      "details": "None",
+      "assertion": "ABSENT"
+    },
+    "ever_screened_for_cancer": {
+      "screened": false,
+      "details": "Never screened",
+      "assertion": "ABSENT"
+    },
+    "family_history_of_cancer": {
+      "present": false,
+      "cancer_type": null,
+      "relative": null,
+      "assertion": "ABSENT"
+    },
+    "consumed_tobacco_or_alcohol": {
+      "present": false,
+      "assertion": "ABSENT"
+    }
+  },
+  "risk_factors": {
+    "current_tobacco_use": {
+      "current_user": false,
+      "smoked": false,
+      "smokeless": false,
+      "duration": "None"
+    },
+    "alcohol_consumption": "Never",
+    "dietary_habits": "Mixed",
+    "fast_food_habit": "No",
+    "physical_activity_level": "Sedentary"
+  },
+  "general_cancer_symptoms": {
+    "unexplained_weight_loss": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "persistent_fever_or_fatigue": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "non_healing_ulcer_or_wound": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "lump_or_swelling_anywhere": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "persistent_pain_without_known_cause": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "bleeding_from_any_site": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "known_chronic_illness_dm_htn_tb": {
+      "reported": false,
+      "assertion": "ABSENT"
+    }
+  },
+  "oral_cancer_screening": {
+    "difficulty_in_opening_mouth": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "white_or_red_patch_in_mouth": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "ulcer_in_mouth_lasting_gt_2_weeks": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "difficulty_in_chewing_or_swallowing": {
+      "reported": false,
+      "assertion": "ABSENT"
+    }
+  }
+}

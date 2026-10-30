@@ -1,0 +1,967 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "models/ggml-small.bin",
+		"language": "en",
+		"translate": true
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:02,000"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 2000
+			},
+			"text": " What is your name? Odai Singh."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,000",
+				"to": "00:00:04,000"
+			},
+			"offsets": {
+				"from": 2000,
+				"to": 4000
+			},
+			"text": " What is your age?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,000",
+				"to": "00:00:06,000"
+			},
+			"offsets": {
+				"from": 4000,
+				"to": 6000
+			},
+			"text": " 32 years old."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,000",
+				"to": "00:00:08,000"
+			},
+			"offsets": {
+				"from": 6000,
+				"to": 8000
+			},
+			"text": " How old are you?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:08,000",
+				"to": "00:00:10,000"
+			},
+			"offsets": {
+				"from": 8000,
+				"to": 10000
+			},
+			"text": " Master."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,000",
+				"to": "00:00:14,000"
+			},
+			"offsets": {
+				"from": 12000,
+				"to": 14000
+			},
+			"text": " What do you do?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,000",
+				"to": "00:00:16,000"
+			},
+			"offsets": {
+				"from": 14000,
+				"to": 16000
+			},
+			"text": " I do jobs."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:16,000",
+				"to": "00:00:18,000"
+			},
+			"offsets": {
+				"from": 16000,
+				"to": 18000
+			},
+			"text": " Are you married?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:18,000",
+				"to": "00:00:20,000"
+			},
+			"offsets": {
+				"from": 18000,
+				"to": 20000
+			},
+			"text": " Yes."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:20,000",
+				"to": "00:00:22,000"
+			},
+			"offsets": {
+				"from": 20000,
+				"to": 22000
+			},
+			"text": " Where do you live? Do you know?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:22,000",
+				"to": "00:00:24,000"
+			},
+			"offsets": {
+				"from": 22000,
+				"to": 24000
+			},
+			"text": " I don't know, but I live here."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:24,000",
+				"to": "00:00:26,000"
+			},
+			"offsets": {
+				"from": 24000,
+				"to": 26000
+			},
+			"text": " What is your father's name?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:26,000",
+				"to": "00:00:30,000"
+			},
+			"offsets": {
+				"from": 26000,
+				"to": 30000
+			},
+			"text": " Master's degree."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:30,000",
+				"to": "00:00:32,000"
+			},
+			"offsets": {
+				"from": 30000,
+				"to": 32000
+			},
+			"text": " What is your mobile number?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,000",
+				"to": "00:00:34,000"
+			},
+			"offsets": {
+				"from": 32000,
+				"to": 34000
+			},
+			"text": " 9454."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:34,000",
+				"to": "00:00:36,000"
+			},
+			"offsets": {
+				"from": 34000,
+				"to": 36000
+			},
+			"text": " 8921."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:36,000",
+				"to": "00:00:38,000"
+			},
+			"offsets": {
+				"from": 36000,
+				"to": 38000
+			},
+			"text": " 9."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:38,000",
+				"to": "00:00:40,000"
+			},
+			"offsets": {
+				"from": 38000,
+				"to": 40000
+			},
+			"text": " What is your monthly income?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:40,000",
+				"to": "00:00:42,000"
+			},
+			"offsets": {
+				"from": 40000,
+				"to": 42000
+			},
+			"text": " 25,000."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:44,000",
+				"to": "00:00:46,000"
+			},
+			"offsets": {
+				"from": 44000,
+				"to": 46000
+			},
+			"text": " Do you have an Avisman card?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:46,000",
+				"to": "00:00:48,000"
+			},
+			"offsets": {
+				"from": 46000,
+				"to": 48000
+			},
+			"text": " Yes."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:50,000",
+				"to": "00:00:52,000"
+			},
+			"offsets": {
+				"from": 50000,
+				"to": 52000
+			},
+			"text": " What is your budget?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:52,000",
+				"to": "00:00:54,000"
+			},
+			"offsets": {
+				"from": 52000,
+				"to": 54000
+			},
+			"text": " 78,000."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:54,000",
+				"to": "00:00:56,000"
+			},
+			"offsets": {
+				"from": 54000,
+				"to": 56000
+			},
+			"text": " Do you ever get diabetes?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:56,000",
+				"to": "00:00:58,000"
+			},
+			"offsets": {
+				"from": 56000,
+				"to": 58000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:58,000",
+				"to": "00:01:00,000"
+			},
+			"offsets": {
+				"from": 58000,
+				"to": 60000
+			},
+			"text": " Have you ever done a test of cancer?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:00,000",
+				"to": "00:01:02,000"
+			},
+			"offsets": {
+				"from": 60000,
+				"to": 62000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:02,000",
+				"to": "00:01:04,000"
+			},
+			"offsets": {
+				"from": 62000,
+				"to": 64000
+			},
+			"text": " Did anyone get cancer at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:04,000",
+				"to": "00:01:06,000"
+			},
+			"offsets": {
+				"from": 64000,
+				"to": 66000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:06,000",
+				"to": "00:01:08,000"
+			},
+			"offsets": {
+				"from": 66000,
+				"to": 68000
+			},
+			"text": " It happened in a relative."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:08,000",
+				"to": "00:01:10,000"
+			},
+			"offsets": {
+				"from": 68000,
+				"to": 70000
+			},
+			"text": " But at the end of the day, I found out about it."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:10,000",
+				"to": "00:01:12,000"
+			},
+			"offsets": {
+				"from": 70000,
+				"to": 72000
+			},
+			"text": " Did anyone get cancer at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:12,000",
+				"to": "00:01:14,000"
+			},
+			"offsets": {
+				"from": 72000,
+				"to": 74000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,000",
+				"to": "00:01:16,000"
+			},
+			"offsets": {
+				"from": 74000,
+				"to": 76000
+			},
+			"text": " It happened in a relative."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:16,000",
+				"to": "00:01:18,000"
+			},
+			"offsets": {
+				"from": 76000,
+				"to": 78000
+			},
+			"text": " But at the end of the day, I found out about it."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:18,000",
+				"to": "00:01:20,000"
+			},
+			"offsets": {
+				"from": 78000,
+				"to": 80000
+			},
+			"text": " Did anyone get cancer at the end of the day?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:20,000",
+				"to": "00:01:22,000"
+			},
+			"offsets": {
+				"from": 80000,
+				"to": 82000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:22,000",
+				"to": "00:01:24,000"
+			},
+			"offsets": {
+				"from": 82000,
+				"to": 84000
+			},
+			"text": " Do you ever get diabetes?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,000",
+				"to": "00:01:26,000"
+			},
+			"offsets": {
+				"from": 84000,
+				"to": 86000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:26,000",
+				"to": "00:01:28,000"
+			},
+			"offsets": {
+				"from": 86000,
+				"to": 88000
+			},
+			"text": " Do you ever drink alcohol?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:28,000",
+				"to": "00:01:30,000"
+			},
+			"offsets": {
+				"from": 88000,
+				"to": 90000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:30,000",
+				"to": "00:01:32,000"
+			},
+			"offsets": {
+				"from": 90000,
+				"to": 92000
+			},
+			"text": " Do you ever get diabetes?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:32,000",
+				"to": "00:01:34,000"
+			},
+			"offsets": {
+				"from": 92000,
+				"to": 94000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:38,000",
+				"to": "00:01:40,000"
+			},
+			"offsets": {
+				"from": 98000,
+				"to": 100000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:40,000",
+				"to": "00:01:42,000"
+			},
+			"offsets": {
+				"from": 100000,
+				"to": 102000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:42,000",
+				"to": "00:01:44,000"
+			},
+			"offsets": {
+				"from": 102000,
+				"to": 104000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:44,000",
+				"to": "00:01:46,000"
+			},
+			"offsets": {
+				"from": 104000,
+				"to": 106000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:46,000",
+				"to": "00:01:48,000"
+			},
+			"offsets": {
+				"from": 106000,
+				"to": 108000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:48,000",
+				"to": "00:01:50,000"
+			},
+			"offsets": {
+				"from": 108000,
+				"to": 110000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:50,000",
+				"to": "00:01:52,000"
+			},
+			"offsets": {
+				"from": 110000,
+				"to": 112000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:52,000",
+				"to": "00:01:54,000"
+			},
+			"offsets": {
+				"from": 112000,
+				"to": 114000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:54,000",
+				"to": "00:01:56,000"
+			},
+			"offsets": {
+				"from": 114000,
+				"to": 116000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:56,000",
+				"to": "00:01:58,000"
+			},
+			"offsets": {
+				"from": 116000,
+				"to": 118000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:58,000",
+				"to": "00:02:00,000"
+			},
+			"offsets": {
+				"from": 118000,
+				"to": 120000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:00,000",
+				"to": "00:02:02,000"
+			},
+			"offsets": {
+				"from": 120000,
+				"to": 122000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:02,000",
+				"to": "00:02:04,000"
+			},
+			"offsets": {
+				"from": 122000,
+				"to": 124000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:04,000",
+				"to": "00:02:06,000"
+			},
+			"offsets": {
+				"from": 124000,
+				"to": 126000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:06,000",
+				"to": "00:02:08,000"
+			},
+			"offsets": {
+				"from": 126000,
+				"to": 128000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:08,000",
+				"to": "00:02:10,000"
+			},
+			"offsets": {
+				"from": 128000,
+				"to": 130000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:10,000",
+				"to": "00:02:12,000"
+			},
+			"offsets": {
+				"from": 130000,
+				"to": 132000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:12,000",
+				"to": "00:02:14,000"
+			},
+			"offsets": {
+				"from": 132000,
+				"to": 134000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:14,000",
+				"to": "00:02:16,000"
+			},
+			"offsets": {
+				"from": 134000,
+				"to": 136000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:16,000",
+				"to": "00:02:18,000"
+			},
+			"offsets": {
+				"from": 136000,
+				"to": 138000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:18,000",
+				"to": "00:02:20,000"
+			},
+			"offsets": {
+				"from": 138000,
+				"to": 140000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:20,000",
+				"to": "00:02:22,000"
+			},
+			"offsets": {
+				"from": 140000,
+				"to": 142000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:22,000",
+				"to": "00:02:24,000"
+			},
+			"offsets": {
+				"from": 142000,
+				"to": 144000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:24,000",
+				"to": "00:02:26,000"
+			},
+			"offsets": {
+				"from": 144000,
+				"to": 146000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:26,000",
+				"to": "00:02:28,000"
+			},
+			"offsets": {
+				"from": 146000,
+				"to": 148000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:28,000",
+				"to": "00:02:30,000"
+			},
+			"offsets": {
+				"from": 148000,
+				"to": 150000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:30,000",
+				"to": "00:02:32,000"
+			},
+			"offsets": {
+				"from": 150000,
+				"to": 152000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:32,000",
+				"to": "00:02:34,000"
+			},
+			"offsets": {
+				"from": 152000,
+				"to": 154000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:34,000",
+				"to": "00:02:36,000"
+			},
+			"offsets": {
+				"from": 154000,
+				"to": 156000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:36,000",
+				"to": "00:02:38,000"
+			},
+			"offsets": {
+				"from": 156000,
+				"to": 158000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:38,000",
+				"to": "00:02:40,000"
+			},
+			"offsets": {
+				"from": 158000,
+				"to": 160000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:40,000",
+				"to": "00:02:42,000"
+			},
+			"offsets": {
+				"from": 160000,
+				"to": 162000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:46,000",
+				"to": "00:02:48,000"
+			},
+			"offsets": {
+				"from": 166000,
+				"to": 168000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:48,000",
+				"to": "00:02:50,000"
+			},
+			"offsets": {
+				"from": 168000,
+				"to": 170000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:50,000",
+				"to": "00:02:52,000"
+			},
+			"offsets": {
+				"from": 170000,
+				"to": 172000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:52,000",
+				"to": "00:02:54,000"
+			},
+			"offsets": {
+				"from": 172000,
+				"to": 174000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:54,000",
+				"to": "00:02:56,000"
+			},
+			"offsets": {
+				"from": 174000,
+				"to": 176000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:56,000",
+				"to": "00:02:58,000"
+			},
+			"offsets": {
+				"from": 176000,
+				"to": 178000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:58,000",
+				"to": "00:03:00,000"
+			},
+			"offsets": {
+				"from": 178000,
+				"to": 180000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:00,000",
+				"to": "00:03:02,000"
+			},
+			"offsets": {
+				"from": 180000,
+				"to": 182000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:02,000",
+				"to": "00:03:04,000"
+			},
+			"offsets": {
+				"from": 182000,
+				"to": 184000
+			},
+			"text": " Do you ever get diabetes at home?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:04,000",
+				"to": "00:03:06,000"
+			},
+			"offsets": {
+				"from": 184000,
+				"to": 186000
+			},
+			"text": " No."
+		}
+	]
+}

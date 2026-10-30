@@ -1,0 +1,109 @@
+{
+  "institution": "Government Institute of Medical Science, Greater Noida",
+  "form_title": "Cancer Health Check up",
+  "patient_id": "Praveen",
+  "demographics": {
+    "name": "Dr. Praveen Kumar Sharma",
+    "age": 30,
+    "dob": "3/1/95",
+    "sex": "Male",
+    "education": "My MBA is completed in PGJR and Community Medicine.",
+    "occupation": "I study in Community Medicine.",
+    "marital_status": "Unmarried",
+    "address": "I live in Bureli.",
+    "mobile": "9-5-7-8-3-4-1",
+    "father_or_husband_name": "Bhagwanda Sharma",
+    "monthly_family_income": "1 Lakh / month",
+    "health_insurance": "No"
+  },
+  "clinical_indicators": {
+    "weight_kg": 58.0,
+    "height": "168.",
+    "bmi": null,
+    "pulse": "Normal",
+    "rr": "Normal",
+    "bp": "Normal"
+  },
+  "history": {
+    "past_medical_history": {
+      "present": false,
+      "details": "None",
+      "assertion": "ABSENT"
+    },
+    "ever_screened_for_cancer": {
+      "screened": false,
+      "details": "Never screened",
+      "assertion": "ABSENT"
+    },
+    "family_history_of_cancer": {
+      "present": true,
+      "cancer_type": "Breast Cancer",
+      "relative": "Mother / Close Relative",
+      "assertion": "PRESENT"
+    },
+    "consumed_tobacco_or_alcohol": {
+      "present": false,
+      "assertion": "ABSENT"
+    }
+  },
+  "risk_factors": {
+    "current_tobacco_use": {
+      "current_user": false,
+      "smoked": false,
+      "smokeless": false,
+      "duration": "None"
+    },
+    "alcohol_consumption": "Never",
+    "dietary_habits": "Mixed",
+    "fast_food_habit": "No",
+    "physical_activity_level": "Regular (>150 min/week)"
+  },
+  "general_cancer_symptoms": {
+    "unexplained_weight_loss": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "persistent_fever_or_fatigue": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "non_healing_ulcer_or_wound": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "lump_or_swelling_anywhere": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "persistent_pain_without_known_cause": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "bleeding_from_any_site": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "known_chronic_illness_dm_htn_tb": {
+      "reported": false,
+      "assertion": "ABSENT"
+    }
+  },
+  "oral_cancer_screening": {
+    "difficulty_in_opening_mouth": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "white_or_red_patch_in_mouth": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "ulcer_in_mouth_lasting_gt_2_weeks": {
+      "reported": false,
+      "assertion": "ABSENT"
+    },
+    "difficulty_in_chewing_or_swallowing": {
+      "reported": false,
+      "assertion": "ABSENT"
+    }
+  }
+}
