@@ -1,80 +1,67 @@
 #!/usr/bin/env python3
-"""
-Exports all pipeline data, transcripts, NER entities, populated forms,
-and evaluation metrics into web/data.json for the interactive dashboard.
+"""Export local pipeline artifacts for the browser dashboard.
+
+The generated web/data.json may contain sensitive clinical information. Keep it local
+and do not commit it to a public repository.
 """
 
-import os
-import json
 import glob
+import json
+import os
+from pathlib import Path
+
+
+def _load_json(path):
+    if not path or not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8", errors="replace") as handle:
+        return json.load(handle)
+
 
 def export_dashboard_data():
     os.makedirs("web", exist_ok=True)
-    
-    patients = ["Praveen", "Priyanshi", "Swarnima", "Uday", "Kajal"]
-    
+
+    # Discover cases from generated forms rather than maintaining a patient-name list.
+    form_paths = sorted(glob.glob("outputs/forms/*_form.json"))
+    case_ids = [Path(path).name[:-len("_form.json")] for path in form_paths]
+    if not case_ids:
+        transcript_paths = sorted(glob.glob("outputs/transcripts/*_en.json"))
+        case_ids = [Path(path).name[:-len("_en.json")] for path in transcript_paths]
+
     data = {
         "patients": {},
-        "evaluation_summary": {}
+        "evaluation_summary": _load_json("outputs/eval/evaluation_summary.json"),
     }
-    
-    # Load evaluation summary
-    if os.path.exists("outputs/eval/evaluation_summary.json"):
-        with open("outputs/eval/evaluation_summary.json", "r", encoding="utf-8") as f:
-            data["evaluation_summary"] = json.load(f)
-            
-    for p in patients:
-        p_data = {
-            "id": p,
-            "audio_file": f"audio/{p}.mp3",
-            "doc_image": f"Docs/{p}.jpeg" if os.path.exists(f"Docs/{p}.jpeg") else "Docs/ManojKumar.jpeg",
+
+    for case_id in case_ids:
+        audio_path = f"audio/{case_id}.mp3"
+        image_candidates = [f"Docs/{case_id}.jpeg", f"Docs/{case_id}.jpg", f"Docs/{case_id}.png"]
+        doc_image = next((path for path in image_candidates if os.path.exists(path)), None)
+        patient_data = {
+            "id": case_id,
+            "audio_file": audio_path if os.path.exists(audio_path) else None,
+            "doc_image": doc_image,
             "transcripts": {
-                "en": [],
-                "hi": []
+                "en": _load_json(f"outputs/transcripts/{case_id}_en.json").get("transcription", []),
+                "hi": _load_json(f"outputs/transcripts/{case_id}_hi.json").get("transcription", []),
             },
-            "ner": {},
-            "form": {},
-            "report_md": ""
+            "ner": _load_json(f"outputs/ner/{case_id}_ner.json"),
+            "form": _load_json(f"outputs/forms/{case_id}_form.json"),
+            "report_md": "",
         }
-        
-        # English transcript
-        en_path = f"outputs/transcripts/{p}_en.json"
-        if os.path.exists(en_path):
-            with open(en_path, "r", encoding="utf-8", errors="replace") as f:
-                d = json.load(f)
-                p_data["transcripts"]["en"] = d.get("transcription", [])
-                
-        # Hindi transcript
-        hi_path = f"outputs/transcripts/{p}_hi.json"
-        if os.path.exists(hi_path):
-            with open(hi_path, "r", encoding="utf-8", errors="replace") as f:
-                d = json.load(f)
-                p_data["transcripts"]["hi"] = d.get("transcription", [])
-                
-        # NER
-        ner_path = f"outputs/ner/{p}_ner.json"
-        if os.path.exists(ner_path):
-            with open(ner_path, "r", encoding="utf-8") as f:
-                p_data["ner"] = json.load(f)
-                
-        # Form
-        form_path = f"outputs/forms/{p}_form.json"
-        if os.path.exists(form_path):
-            with open(form_path, "r", encoding="utf-8") as f:
-                p_data["form"] = json.load(f)
-                
-        # Markdown report
-        rep_path = f"outputs/forms/{p}_report.md"
-        if os.path.exists(rep_path):
-            with open(rep_path, "r", encoding="utf-8") as f:
-                p_data["report_md"] = f.read()
-                
-        data["patients"][p] = p_data
-        
-    with open("web/data.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-        
-    print(f"Exported data for {len(patients)} patients to web/data.json")
+        report_path = f"outputs/forms/{case_id}_report.md"
+        if os.path.exists(report_path):
+            with open(report_path, "r", encoding="utf-8", errors="replace") as handle:
+                patient_data["report_md"] = handle.read()
+        data["patients"][case_id] = patient_data
+
+    output_path = "web/data.json"
+    with open(output_path, "w", encoding="utf-8") as handle:
+        json.dump(data, handle, indent=2, ensure_ascii=False)
+
+    print(f"Exported {len(case_ids)} case(s) to {output_path}.")
+    print("Reminder: web/data.json may contain patient information; do not publish or commit it.")
+
 
 if __name__ == "__main__":
     export_dashboard_data()
