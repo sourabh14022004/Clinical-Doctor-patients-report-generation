@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_case_id": "Kajal",
+  "annotation_status": "pending",
+  "reviewer_1": "",
+  "reviewer_2": "",
+  "adjudication_complete": false,
+  "transcript_text": "What is your name? Kajal What is your age? 26 years old How old are you? BSc Nursing What is your occupation? Nursing Officer Are you married? No Tell me Barely Mobile number? Father's name? Veerendra Kumar Monthly income? 25000 Do you have any health insurance like Ayushman card? No How much is your weight? 38 KG Have you ever had any disease like BP sugar? BP Have you ever tested for cancer? No Have you ever had any cancer? No Do you drink alcohol? No Have you ever had a basic grade? No Have you ever had alcohol? Do you exercise? Do you do it daily? Yes Daily Do you have any mental health insurance? Vegetarian Fast food? Do you eat? Yes Have you ever lost a lot of weight in 6 months? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a headache? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a headache? No Have you ever had a headache? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had abnormal bleeding? No No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever? No Have you ever had a fever?",
+  "annotations": [],
+  "annotation_instructions": {
+    "span_offsets": "Use zero-based, end-exclusive character offsets into transcript_text.",
+    "fields": [
+      "start",
+      "end",
+      "text",
+      "entity_type",
+      "assertion"
+    ],
+    "entity_type": "Use the project entity taxonomy listed in docs/M4_EVALUATION_PROTOCOL.md.",
+    "assertion": "PRESENT, ABSENT, POSSIBLE, or UNKNOWN based on transcript context.",
+    "independence": "Annotate from transcript/source material, not by copying predicted entities. Use two independent reviewers and adjudicate disagreements.",
+    "completion": "Set annotation_status to complete only after review/adjudication."
+  }
+}

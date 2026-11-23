@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_case_id": "Uday",
+  "annotation_status": "pending",
+  "reviewer_1": "",
+  "reviewer_2": "",
+  "adjudication_complete": false,
+  "transcript_text": "What is your name? Odai Singh. What is your age? 32 years old. How old are you? Master. What do you do? I do jobs. Are you married? Yes. Where do you live? Do you know? I don't know, but I live here. What is your father's name? Master's degree. What is your mobile number? 9454. 8921. 9. What is your monthly income? 25,000. Do you have an Avisman card? Yes. What is your budget? 78,000. Do you ever get diabetes? No. Have you ever done a test of cancer? No. Did anyone get cancer at home? No. It happened in a relative. But at the end of the day, I found out about it. Did anyone get cancer at home? No. It happened in a relative. But at the end of the day, I found out about it. Did anyone get cancer at the end of the day? No. Do you ever get diabetes? No. Do you ever drink alcohol? No. Do you ever get diabetes? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No. Do you ever get diabetes at home? No.",
+  "annotations": [],
+  "annotation_instructions": {
+    "span_offsets": "Use zero-based, end-exclusive character offsets into transcript_text.",
+    "fields": [
+      "start",
+      "end",
+      "text",
+      "entity_type",
+      "assertion"
+    ],
+    "entity_type": "Use the project entity taxonomy listed in docs/M4_EVALUATION_PROTOCOL.md.",
+    "assertion": "PRESENT, ABSENT, POSSIBLE, or UNKNOWN based on transcript context.",
+    "independence": "Annotate from transcript/source material, not by copying predicted entities. Use two independent reviewers and adjudicate disagreements.",
+    "completion": "Set annotation_status to complete only after review/adjudication."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_case_id": "Swarnima",
+  "annotation_status": "pending",
+  "reviewer_1": "",
+  "reviewer_2": "",
+  "adjudication_complete": false,
+  "transcript_text": "Namaste Ma'am, my name is Dr. Priyanshi Chauhan, I want to ask you a few questions. What is your name? Swaidema. And what is your age? 30. And what is your date of birth? 35, 1995. And where have you studied? I have done MBBS. And what are you doing now? I am PGJR in the community medicine department. You are married? Yes. And what is your address? Noida. What is your husband's name? Raja Vashne. Will you tell me your phone number? 9-6-3-4-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5. How much is your monthly family income? In a month. 2 lakhs. Do you have any health insurance? No. How much is your weight? 64. And what is your height? 5. 2. Do you have any long disease? Diabetes, hyperbacteria, B.P. No. Any disease? Have you ever tested any kind of cancer, like breast cancer or oral cancer? Yes. What type of cancer? Survival. Is there anyone in your family who has ever had cancer? No. Have you ever consumed alcohol or tobacco? No. What type of food do you eat? Vegetarian or fried food? Vegetarian. Vegetarian. Do you exercise daily or sometimes you don't exercise at all? No. Do you have any questions related to cancer related symptoms? Do you have anything like this or not? Have you ever lost weight in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a fever or tired in the last 6 months? No. Have you ever had a fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No. Have you ever had a long fever or tired in the last 6 months? No.",
+  "annotations": [],
+  "annotation_instructions": {
+    "span_offsets": "Use zero-based, end-exclusive character offsets into transcript_text.",
+    "fields": [
+      "start",
+      "end",
+      "text",
+      "entity_type",
+      "assertion"
+    ],
+    "entity_type": "Use the project entity taxonomy listed in docs/M4_EVALUATION_PROTOCOL.md.",
+    "assertion": "PRESENT, ABSENT, POSSIBLE, or UNKNOWN based on transcript context.",
+    "independence": "Annotate from transcript/source material, not by copying predicted entities. Use two independent reviewers and adjudicate disagreements.",
+    "completion": "Set annotation_status to complete only after review/adjudication."
+  }
+}

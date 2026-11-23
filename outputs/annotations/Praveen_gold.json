@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_case_id": "Praveen",
+  "annotation_status": "pending",
+  "reviewer_1": "",
+  "reviewer_2": "",
+  "adjudication_complete": false,
+  "transcript_text": "Namaste, my name is Dr. Swenimai. I would like to ask you a few questions. What is your name? Dr. Praveen Kumar Sharma. How old are you? 30. What is your date of birth? 3...1...95. How far have you studied? My MBA is completed in PGJR and Community Medicine. What do you do? I study in Community Medicine. Are you married? No. What is your address? I live in Bureli. What is your father's name? Bhagwanda Sharma. What is your mobile number? 9-5-7-8-3-4-1. What is your monthly family income? 1 lakh. Have you enrol in any government scheme like Ayushma or SIC? No. What is your weight? 58. What is your height? 168. Have you ever been sick like diabetes, BP, sugar? No. Have you ever been tested for any cancer? No. Cervical, Breast, Oral? Have you ever been tested for any family cancer? For my mother. For what? Breast. Have you ever been tested for tobacco? No. Have you ever been tested for tobacco? No. Have you ever been tested for tobacco? No. Are you a shaka Hari or mixed? Shaka Hari. Are you a shari rick? What is it? How much physical activity do you do daily? 1 hour. 1 hour? I would like to ask questions related to cancer. Have you ever lost weight in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No. Have you ever been sick or tired in the last 6 months? No.",
+  "annotations": [],
+  "annotation_instructions": {
+    "span_offsets": "Use zero-based, end-exclusive character offsets into transcript_text.",
+    "fields": [
+      "start",
+      "end",
+      "text",
+      "entity_type",
+      "assertion"
+    ],
+    "entity_type": "Use the project entity taxonomy listed in docs/M4_EVALUATION_PROTOCOL.md.",
+    "assertion": "PRESENT, ABSENT, POSSIBLE, or UNKNOWN based on transcript context.",
+    "independence": "Annotate from transcript/source material, not by copying predicted entities. Use two independent reviewers and adjudicate disagreements.",
+    "completion": "Set annotation_status to complete only after review/adjudication."
+  }
+}

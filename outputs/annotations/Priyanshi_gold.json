@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "source_case_id": "Priyanshi",
+  "annotation_status": "pending",
+  "reviewer_1": "",
+  "reviewer_2": "",
+  "adjudication_complete": false,
+  "transcript_text": "Hello, my name is Dr. Swainimai. I would like to ask you some questions. Your name? Priyanka Chauhan. Your age? 26 years old. Your date of birth? 6th July 2000. How much did you study? I am an MBBS graduate. What do you do? I am now in PGJRO's medical department. Are you married? No, I am not married yet. What is your address? I live in Sanjay Nagar, Gajabad. Your father's name? Mr. Pramod Kumar. How much is your monthly family income? 1 lakh rupees. What is your mobile number? 931-556-7783. Did you enroll in any government scheme like Ayushman, insurance, ESI? No. What is your weight? 70. What is your height? 5 feet 2 inches. Are you suffering from diabetes, hypertension? No. Have you ever tried breast oral survival for cancer? No. Do you have any cancer in your family? Yes, I had to get it. Breast cancer. Have you ever used alcohol or tobacco? No. Have you ever used tobacco? No. In any form? No. Have you ever drunk alcohol? No. Have you ever eaten shakha or masahari? I mean both shakha and masahari. Yes. Do you work hard daily? No. Have you lost weight in the past 6 months? No. Have you ever had a long fever? No. Have you ever had a wound that has not healed in the past 6 months? No. Have you ever had a sore throat or swelling? No. Have you ever had a pain in the past 6 months? No. Have you ever had a bleeding in any form? No. Have you ever had a long illness? No. Have you ever had a headache in opening your mouth? No. Have you ever had a red or white wound in your mouth? No. Have you ever had a wound that has not healed in the past 2 weeks? No. Have you ever had a headache in opening your mouth? No. Thank you.",
+  "annotations": [],
+  "annotation_instructions": {
+    "span_offsets": "Use zero-based, end-exclusive character offsets into transcript_text.",
+    "fields": [
+      "start",
+      "end",
+      "text",
+      "entity_type",
+      "assertion"
+    ],
+    "entity_type": "Use the project entity taxonomy listed in docs/M4_EVALUATION_PROTOCOL.md.",
+    "assertion": "PRESENT, ABSENT, POSSIBLE, or UNKNOWN based on transcript context.",
+    "independence": "Annotate from transcript/source material, not by copying predicted entities. Use two independent reviewers and adjudicate disagreements.",
+    "completion": "Set annotation_status to complete only after review/adjudication."
+  }
+}
