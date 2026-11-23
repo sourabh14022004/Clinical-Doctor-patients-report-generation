@@ -1,4 +1,5 @@
 {
+  "schema_version": "2.0",
   "institution": "Government Institute of Medical Science, Greater Noida",
   "form_title": "Cancer Health Check up",
   "patient_id": "Priyanshi",
@@ -6,104 +7,279 @@
     "name": "Priyanka Chauhan",
     "age": 26,
     "dob": "6th July 2000",
-    "sex": "Female",
+    "sex": null,
     "education": "MBBS",
     "occupation": "PGJR (Junior Resident)",
     "marital_status": "Unmarried",
-    "address": "Sanjay Nagar, Ghaziabad",
+    "address": "Sanjay Nagar, Gajabad",
     "mobile": "9315567783",
     "father_or_husband_name": "Pramod Kumar",
-    "monthly_family_income": "1 Lakh / month",
+    "monthly_family_income": "1 lakh rupees",
     "health_insurance": "No"
   },
   "clinical_indicators": {
     "weight_kg": 70.0,
-    "height": "5 feet 2 inches.",
-    "bmi": 30.1,
-    "pulse": "Normal",
-    "rr": "Normal",
-    "bp": "Normal"
+    "height": "5 feet 2 inches",
+    "bmi": null,
+    "pulse": null,
+    "rr": null,
+    "bp": null
   },
   "history": {
     "past_medical_history": {
       "present": false,
-      "details": "None",
-      "assertion": "ABSENT"
+      "details": "Explicitly denied",
+      "assertion": "ABSENT",
+      "evidence": "No"
     },
     "ever_screened_for_cancer": {
       "screened": false,
-      "details": "Never screened",
-      "assertion": "ABSENT"
+      "details": "No",
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever tried breast oral survival for cancer?"
     },
     "family_history_of_cancer": {
       "present": true,
-      "cancer_type": "Breast Cancer",
-      "relative": "Mother / Close Relative",
-      "assertion": "PRESENT"
+      "cancer_type": "Breast cancer",
+      "relative": "Family member (unspecified)",
+      "assertion": "PRESENT",
+      "evidence": "Yes, I had to get it. Breast cancer"
     },
     "consumed_tobacco_or_alcohol": {
       "present": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever used alcohol or tobacco?"
     }
   },
   "risk_factors": {
     "current_tobacco_use": {
-      "current_user": false,
-      "smoked": false,
-      "smokeless": false,
-      "duration": "None"
+      "current_user": null,
+      "assertion": "UNKNOWN",
+      "smoked": null,
+      "smokeless": null,
+      "duration": null,
+      "evidence": null,
+      "source_question": null
     },
-    "alcohol_consumption": "Never",
-    "dietary_habits": "Mixed",
-    "fast_food_habit": "No",
-    "physical_activity_level": "Sedentary"
+    "alcohol_consumption": null,
+    "dietary_habits": null,
+    "fast_food_habit": {
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
+    },
+    "physical_activity_level": "No/low activity reported"
   },
   "general_cancer_symptoms": {
     "unexplained_weight_loss": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you lost weight in the past 6 months?"
     },
     "persistent_fever_or_fatigue": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a long fever?"
     },
     "non_healing_ulcer_or_wound": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a wound that has not healed in the past 6 months?"
     },
     "lump_or_swelling_anywhere": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a sore throat or swelling?"
     },
     "persistent_pain_without_known_cause": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a pain in the past 6 months?"
     },
     "bleeding_from_any_site": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a bleeding in any form?"
     },
     "known_chronic_illness_dm_htn_tb": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Are you suffering from diabetes, hypertension?"
     }
   },
   "oral_cancer_screening": {
     "difficulty_in_opening_mouth": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a headache in opening your mouth?"
     },
     "white_or_red_patch_in_mouth": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a red or white wound in your mouth?"
     },
     "ulcer_in_mouth_lasting_gt_2_weeks": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a red or white wound in your mouth?"
     },
     "difficulty_in_chewing_or_swallowing": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     }
-  }
+  },
+  "extraction_evidence": {
+    "demographics.name": {
+      "question": "Your name?",
+      "answer": "Priyanka Chauhan"
+    },
+    "demographics.age": {
+      "question": "Your age?",
+      "answer": "26 years old"
+    },
+    "demographics.dob": {
+      "question": "Your date of birth?",
+      "answer": "6th July 2000"
+    },
+    "demographics.education": {
+      "question": "How much did you study?",
+      "answer": "I am an MBBS graduate"
+    },
+    "demographics.occupation": {
+      "question": "What do you do?",
+      "answer": "I am now in PGJRO's medical department"
+    },
+    "demographics.marital_status": {
+      "question": "Are you married?",
+      "answer": "No, I am not married yet"
+    },
+    "demographics.address": {
+      "question": "What is your address?",
+      "answer": "I live in Sanjay Nagar, Gajabad"
+    },
+    "demographics.mobile": {
+      "question": "What is your mobile number?",
+      "answer": "931-556-7783"
+    },
+    "demographics.father_or_husband_name": {
+      "question": "Your father's name?",
+      "answer": "Mr. Pramod Kumar"
+    },
+    "demographics.monthly_family_income": {
+      "question": "How much is your monthly family income?",
+      "answer": "1 lakh rupees"
+    },
+    "demographics.health_insurance": {
+      "question": "Did you enroll in any government scheme like Ayushman, insurance, ESI?",
+      "answer": "No"
+    },
+    "clinical_indicators.weight_kg": {
+      "question": "What is your weight?",
+      "answer": "70"
+    },
+    "clinical_indicators.height": {
+      "question": "What is your height?",
+      "answer": "5 feet 2 inches"
+    },
+    "history.past_medical_history": {
+      "question": "Are you suffering from diabetes, hypertension?",
+      "answer": "No"
+    },
+    "history.ever_screened_for_cancer": {
+      "question": "Have you ever tried breast oral survival for cancer?",
+      "answer": "No"
+    },
+    "history.family_history_of_cancer": {
+      "question": "Do you have any cancer in your family?",
+      "answer": "Yes, I had to get it. Breast cancer"
+    },
+    "history.consumed_tobacco_or_alcohol": {
+      "question": "Have you ever used alcohol or tobacco?",
+      "answer": "No"
+    },
+    "risk_factors.current_tobacco_use": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.alcohol_consumption": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.dietary_habits": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.fast_food_habit": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.physical_activity_level": {
+      "question": "Do you work hard daily?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.known_chronic_illness_dm_htn_tb": {
+      "question": "Are you suffering from diabetes, hypertension?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.unexplained_weight_loss": {
+      "question": "Have you lost weight in the past 6 months?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.persistent_fever_or_fatigue": {
+      "question": "Have you ever had a long fever?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.non_healing_ulcer_or_wound": {
+      "question": "Have you ever had a wound that has not healed in the past 6 months?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.lump_or_swelling_anywhere": {
+      "question": "Have you ever had a sore throat or swelling?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.persistent_pain_without_known_cause": {
+      "question": "Have you ever had a pain in the past 6 months?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.bleeding_from_any_site": {
+      "question": "Have you ever had a bleeding in any form?",
+      "answer": "No"
+    },
+    "oral_cancer_screening.difficulty_in_opening_mouth": {
+      "question": "Have you ever had a headache in opening your mouth?",
+      "answer": "No"
+    },
+    "oral_cancer_screening.white_or_red_patch_in_mouth": {
+      "question": "Have you ever had a red or white wound in your mouth?",
+      "answer": "No"
+    },
+    "oral_cancer_screening.ulcer_in_mouth_lasting_gt_2_weeks": {
+      "question": "Have you ever had a red or white wound in your mouth?",
+      "answer": "No"
+    },
+    "oral_cancer_screening.difficulty_in_chewing_or_swallowing": {
+      "question": null,
+      "answer": null
+    }
+  },
+  "processing_notes": [
+    "Unanswered fields are UNKNOWN/null and are not interpreted as negative.",
+    "Sex, weight, height and other demographics are not inferred from patient identifiers.",
+    "Generated output requires clinician review before any real-world use."
+  ]
 }

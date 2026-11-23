@@ -1586,7 +1586,9 @@
       "end": 61,
       "entity_type": "AGE",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "32 years old"
     },
     {
       "span": "married",
@@ -1594,7 +1596,9 @@
       "end": 130,
       "entity_type": "MARITAL_STATUS",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Are you married"
     },
     {
       "span": "diabetes",
@@ -1607,7 +1611,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes"
     },
     {
       "span": "diabetes",
@@ -1620,7 +1626,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes"
     },
     {
       "span": "diabetes",
@@ -1633,7 +1641,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes"
     },
     {
       "span": "diabetes",
@@ -1646,7 +1656,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1659,7 +1671,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1672,7 +1686,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1685,7 +1701,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1698,7 +1716,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1711,7 +1731,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1724,7 +1746,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1737,7 +1761,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1750,7 +1776,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1763,7 +1791,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1776,7 +1806,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1789,7 +1821,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1802,7 +1836,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1815,7 +1851,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1828,7 +1866,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1841,7 +1881,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1854,7 +1896,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1867,7 +1911,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1880,7 +1926,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1893,7 +1941,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "diabetes",
@@ -1906,7 +1956,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever get diabetes at home"
     },
     {
       "span": "cancer",
@@ -1919,7 +1971,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever done a test of cancer"
     },
     {
       "span": "cancer",
@@ -1932,7 +1986,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Did anyone get cancer at home"
     },
     {
       "span": "cancer",
@@ -1945,7 +2001,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Did anyone get cancer at home"
     },
     {
       "span": "cancer",
@@ -1958,7 +2016,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Did anyone get cancer at the end of the"
     },
     {
       "span": "alcohol",
@@ -1971,7 +2031,9 @@
         "preferred_term": "Alcohol intake",
         "cui": "C0001948"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you ever drink alcohol"
     },
     {
       "span": "father",
@@ -1979,7 +2041,9 @@
       "end": 219,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "What is your father 's name"
     },
     {
       "span": "relative",
@@ -1987,7 +2051,9 @@
       "end": 519,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "It happened in a relative"
     },
     {
       "span": "relative",
@@ -1995,7 +2061,9 @@
       "end": 630,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "It happened in a relative"
     }
   ],
   "relations": [
@@ -2009,7 +2077,7 @@
         "span": "relative",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN"
     },
     {
       "relation_type": "FamilyHistory_Of",
@@ -2021,7 +2089,7 @@
         "span": "relative",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT"
     },
     {
       "relation_type": "FamilyHistory_Of",
@@ -2033,7 +2101,7 @@
         "span": "relative",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT"
     },
     {
       "relation_type": "FamilyHistory_Of",
@@ -2045,7 +2113,7 @@
         "span": "relative",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT"
     },
     {
       "relation_type": "FamilyHistory_Of",
@@ -2057,7 +2125,7 @@
         "span": "relative",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT"
     },
     {
       "relation_type": "Status_Of",
@@ -2066,7 +2134,7 @@
         "type": "RISK_FACTOR_ALCOHOL"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     }
   ],

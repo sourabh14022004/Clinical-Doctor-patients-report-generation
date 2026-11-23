@@ -1325,7 +1325,9 @@
       "end": 20,
       "entity_type": "PATIENT_NAME",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Hello, my name is Dr"
     },
     {
       "span": "Mr. Pramod Kumar",
@@ -1333,7 +1335,9 @@
       "end": 398,
       "entity_type": "PATIENT_NAME",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Mr. Pramod Kumar"
     },
     {
       "span": "26 years old",
@@ -1341,7 +1345,9 @@
       "end": 124,
       "entity_type": "AGE",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "26 years old"
     },
     {
       "span": "MBBS",
@@ -1349,7 +1355,9 @@
       "end": 197,
       "entity_type": "EDUCATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "I am an MBBS graduate"
     },
     {
       "span": "married",
@@ -1357,7 +1365,9 @@
       "end": 279,
       "entity_type": "MARITAL_STATUS",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Are you married"
     },
     {
       "span": "married",
@@ -1365,7 +1375,9 @@
       "end": 301,
       "entity_type": "MARITAL_STATUS",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "assertion_reason": "LOCAL_NEGATION_CUE",
+      "assertion_context": "No, I am not married yet"
     },
     {
       "span": "1 lakh",
@@ -1373,7 +1385,9 @@
       "end": 446,
       "entity_type": "FAMILY_INCOME",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "1 lakh rupees"
     },
     {
       "span": "Ayushman",
@@ -1381,7 +1395,9 @@
       "end": 550,
       "entity_type": "HEALTH_INSURANCE",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "you enroll in any government scheme like Ayushman , insurance, ESI"
     },
     {
       "span": "insurance",
@@ -1389,7 +1405,9 @@
       "end": 561,
       "entity_type": "HEALTH_INSURANCE",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "enroll in any government scheme like Ayushman, insurance , ESI"
     },
     {
       "span": "5 feet",
@@ -1397,7 +1415,9 @@
       "end": 624,
       "entity_type": "HEIGHT",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "5 feet 2 inches"
     },
     {
       "span": "fever",
@@ -1410,7 +1430,9 @@
         "preferred_term": "Fever",
         "cui": "C0015967"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever had a long fever"
     },
     {
       "span": "wound",
@@ -1423,7 +1445,9 @@
         "preferred_term": "Wound",
         "cui": "C0043187"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever had a wound that has not healed in"
     },
     {
       "span": "wound",
@@ -1436,7 +1460,9 @@
         "preferred_term": "Wound",
         "cui": "C0043187"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "you ever had a red or white wound in your mouth"
     },
     {
       "span": "wound",
@@ -1449,7 +1475,9 @@
         "preferred_term": "Wound",
         "cui": "C0043187"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever had a wound that has not healed in"
     },
     {
       "span": "swelling",
@@ -1462,7 +1490,9 @@
         "preferred_term": "Swelling",
         "cui": "C0038999"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "you ever had a sore throat or swelling"
     },
     {
       "span": "pain",
@@ -1475,7 +1505,9 @@
         "preferred_term": "Pain",
         "cui": "C0030193"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever had a pain in the past 6 months"
     },
     {
       "span": "bleeding",
@@ -1488,7 +1520,9 @@
         "preferred_term": "Bleeding",
         "cui": "C0019080"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever had a bleeding in any form"
     },
     {
       "span": "diabetes",
@@ -1501,7 +1535,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Are you suffering from diabetes , hypertension"
     },
     {
       "span": "hypertension",
@@ -1514,7 +1550,9 @@
         "preferred_term": "Hypertensive disorder",
         "cui": "C0020538"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Are you suffering from diabetes, hypertension"
     },
     {
       "span": "Breast cancer",
@@ -1527,7 +1565,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Breast cancer"
     },
     {
       "span": "cancer",
@@ -1540,7 +1580,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "you ever tried breast oral survival for cancer"
     },
     {
       "span": "cancer",
@@ -1553,7 +1595,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Do you have any cancer in your family"
     },
     {
       "span": "cancer",
@@ -1566,7 +1610,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Breast cancer"
     },
     {
       "span": "tobacco",
@@ -1579,7 +1625,9 @@
         "preferred_term": "Tobacco smoking behavior",
         "cui": "C0040329"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever used alcohol or tobacco"
     },
     {
       "span": "tobacco",
@@ -1592,7 +1640,9 @@
         "preferred_term": "Tobacco smoking behavior",
         "cui": "C0040329"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever used tobacco"
     },
     {
       "span": "alcohol",
@@ -1605,7 +1655,9 @@
         "preferred_term": "Alcohol intake",
         "cui": "C0001948"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever used alcohol or tobacco"
     },
     {
       "span": "alcohol",
@@ -1618,7 +1670,9 @@
         "preferred_term": "Alcohol intake",
         "cui": "C0001948"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever drunk alcohol"
     },
     {
       "span": "father",
@@ -1626,7 +1680,9 @@
       "end": 373,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Your father 's name"
     }
   ],
   "relations": [
@@ -1637,7 +1693,7 @@
         "type": "RISK_FACTOR_TOBACCO"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     },
     {
@@ -1647,7 +1703,7 @@
         "type": "RISK_FACTOR_TOBACCO"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     },
     {
@@ -1657,7 +1713,7 @@
         "type": "RISK_FACTOR_ALCOHOL"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     },
     {
@@ -1667,7 +1723,7 @@
         "type": "RISK_FACTOR_ALCOHOL"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     }
   ],

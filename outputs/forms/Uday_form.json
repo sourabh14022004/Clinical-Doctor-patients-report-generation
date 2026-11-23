@@ -1,109 +1,285 @@
 {
+  "schema_version": "2.0",
   "institution": "Government Institute of Medical Science, Greater Noida",
   "form_title": "Cancer Health Check up",
   "patient_id": "Uday",
   "demographics": {
-    "name": "Master's degree",
+    "name": "Odai Singh",
     "age": 32,
-    "dob": "N/A",
-    "sex": "Male",
-    "education": "Graduation",
-    "occupation": "Service / Job",
+    "dob": null,
+    "sex": null,
+    "education": null,
+    "occupation": "I do jobs",
     "marital_status": "Married",
-    "address": "Mu-2, Greater Noida",
-    "mobile": "9454. 8921. 9",
-    "father_or_husband_name": "'s degree",
-    "monthly_family_income": "25,000 / month",
-    "health_insurance": "No"
+    "address": null,
+    "mobile": null,
+    "father_or_husband_name": "Master's degree",
+    "monthly_family_income": "25,000",
+    "health_insurance": null
   },
   "clinical_indicators": {
-    "weight_kg": 78.0,
-    "height": "5' 8\"",
-    "bmi": 26.1,
-    "pulse": "Normal",
-    "rr": "Normal",
-    "bp": "Normal"
+    "weight_kg": null,
+    "height": null,
+    "bmi": null,
+    "pulse": null,
+    "rr": null,
+    "bp": null
   },
   "history": {
     "past_medical_history": {
       "present": false,
-      "details": "None",
-      "assertion": "ABSENT"
+      "details": "Explicitly denied",
+      "assertion": "ABSENT",
+      "evidence": "No"
     },
     "ever_screened_for_cancer": {
-      "screened": false,
-      "details": "Never screened",
-      "assertion": "ABSENT"
+      "screened": null,
+      "details": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "family_history_of_cancer": {
       "present": false,
       "cancer_type": null,
       "relative": null,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No. It happened in a relative. But at the end of the day, I found out about it"
     },
     "consumed_tobacco_or_alcohol": {
-      "present": false,
-      "assertion": "ABSENT"
+      "present": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     }
   },
   "risk_factors": {
     "current_tobacco_use": {
-      "current_user": false,
-      "smoked": false,
-      "smokeless": false,
-      "duration": "None"
+      "current_user": null,
+      "assertion": "UNKNOWN",
+      "smoked": null,
+      "smokeless": null,
+      "duration": null,
+      "evidence": null,
+      "source_question": null
     },
     "alcohol_consumption": "Never",
-    "dietary_habits": "Mixed",
-    "fast_food_habit": "No",
-    "physical_activity_level": "Sedentary"
+    "dietary_habits": null,
+    "fast_food_habit": {
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
+    },
+    "physical_activity_level": null
   },
   "general_cancer_symptoms": {
     "unexplained_weight_loss": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "persistent_fever_or_fatigue": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "non_healing_ulcer_or_wound": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "lump_or_swelling_anywhere": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "persistent_pain_without_known_cause": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "bleeding_from_any_site": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "known_chronic_illness_dm_htn_tb": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Do you ever get diabetes?"
     }
   },
   "oral_cancer_screening": {
     "difficulty_in_opening_mouth": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "white_or_red_patch_in_mouth": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "ulcer_in_mouth_lasting_gt_2_weeks": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "difficulty_in_chewing_or_swallowing": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     }
-  }
+  },
+  "extraction_evidence": {
+    "demographics.name": {
+      "question": "What is your name?",
+      "answer": "Odai Singh"
+    },
+    "demographics.age": {
+      "question": "What is your age?",
+      "answer": "32 years old"
+    },
+    "demographics.dob": {
+      "question": null,
+      "answer": null
+    },
+    "demographics.education": {
+      "question": null,
+      "answer": null
+    },
+    "demographics.occupation": {
+      "question": "What do you do?",
+      "answer": "I do jobs"
+    },
+    "demographics.marital_status": {
+      "question": "Are you married?",
+      "answer": "Yes"
+    },
+    "demographics.address": {
+      "question": null,
+      "answer": null
+    },
+    "demographics.mobile": {
+      "question": "What is your mobile number?",
+      "answer": "9454. 8921. 9"
+    },
+    "demographics.father_or_husband_name": {
+      "question": "What is your father's name?",
+      "answer": "Master's degree"
+    },
+    "demographics.monthly_family_income": {
+      "question": "What is your monthly income?",
+      "answer": "25,000"
+    },
+    "demographics.health_insurance": {
+      "question": null,
+      "answer": null
+    },
+    "clinical_indicators.weight_kg": {
+      "question": null,
+      "answer": null
+    },
+    "clinical_indicators.height": {
+      "question": null,
+      "answer": null
+    },
+    "history.past_medical_history": {
+      "question": "Do you ever get diabetes?",
+      "answer": "No"
+    },
+    "history.ever_screened_for_cancer": {
+      "question": null,
+      "answer": null
+    },
+    "history.family_history_of_cancer": {
+      "question": "Did anyone get cancer at home?",
+      "answer": "No. It happened in a relative. But at the end of the day, I found out about it"
+    },
+    "history.consumed_tobacco_or_alcohol": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.current_tobacco_use": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.alcohol_consumption": {
+      "question": "Do you ever drink alcohol?",
+      "answer": "No"
+    },
+    "risk_factors.dietary_habits": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.fast_food_habit": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.physical_activity_level": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.known_chronic_illness_dm_htn_tb": {
+      "question": "Do you ever get diabetes?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.unexplained_weight_loss": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.persistent_fever_or_fatigue": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.non_healing_ulcer_or_wound": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.lump_or_swelling_anywhere": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.persistent_pain_without_known_cause": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.bleeding_from_any_site": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.difficulty_in_opening_mouth": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.white_or_red_patch_in_mouth": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.ulcer_in_mouth_lasting_gt_2_weeks": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.difficulty_in_chewing_or_swallowing": {
+      "question": null,
+      "answer": null
+    }
+  },
+  "processing_notes": [
+    "Unanswered fields are UNKNOWN/null and are not interpreted as negative.",
+    "Sex, weight, height and other demographics are not inferred from patient identifiers.",
+    "Generated output requires clinician review before any real-world use."
+  ]
 }

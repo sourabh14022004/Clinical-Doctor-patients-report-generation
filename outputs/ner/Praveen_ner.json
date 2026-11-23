@@ -1449,7 +1449,9 @@
       "end": 22,
       "entity_type": "PATIENT_NAME",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Namaste, my name is Dr"
     },
     {
       "span": "Dr. Praveen Kumar Sharma",
@@ -1457,7 +1459,9 @@
       "end": 118,
       "entity_type": "PATIENT_NAME",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "Dr. Praveen Kumar Sharma"
     },
     {
       "span": "3...1...95",
@@ -1465,7 +1469,9 @@
       "end": 179,
       "entity_type": "DOB",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "3...1...95"
     },
     {
       "span": "PGJR",
@@ -1473,7 +1479,9 @@
       "end": 234,
       "entity_type": "OCCUPATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "My MBA is completed in PGJR and Community Medicine"
     },
     {
       "span": "married",
@@ -1481,7 +1489,9 @@
       "end": 321,
       "entity_type": "MARITAL_STATUS",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Are you married"
     },
     {
       "span": "1 lakh",
@@ -1489,7 +1499,9 @@
       "end": 498,
       "entity_type": "FAMILY_INCOME",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "1 lakh"
     },
     {
       "span": "diabetes",
@@ -1502,7 +1514,9 @@
         "preferred_term": "Diabetes mellitus",
         "cui": "C0011849"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever been sick like diabetes , BP, sugar"
     },
     {
       "span": "sugar",
@@ -1510,7 +1524,9 @@
       "end": 664,
       "entity_type": "DIAGNOSIS",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "you ever been sick like diabetes, BP, sugar"
     },
     {
       "span": "BP",
@@ -1518,7 +1534,9 @@
       "end": 657,
       "entity_type": "DIAGNOSIS",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever been sick like diabetes, BP , sugar"
     },
     {
       "span": "cancer",
@@ -1531,7 +1549,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever been tested for any cancer"
     },
     {
       "span": "cancer",
@@ -1544,7 +1564,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "PRESENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "you ever been tested for any family cancer"
     },
     {
       "span": "cancer",
@@ -1557,7 +1579,9 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "would like to ask questions related to cancer"
     },
     {
       "span": "tobacco",
@@ -1570,7 +1594,9 @@
         "preferred_term": "Tobacco smoking behavior",
         "cui": "C0040329"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever been tested for tobacco"
     },
     {
       "span": "tobacco",
@@ -1583,7 +1609,9 @@
         "preferred_term": "Tobacco smoking behavior",
         "cui": "C0040329"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever been tested for tobacco"
     },
     {
       "span": "tobacco",
@@ -1596,7 +1624,9 @@
         "preferred_term": "Tobacco smoking behavior",
         "cui": "C0040329"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever been tested for tobacco"
     },
     {
       "span": "mixed",
@@ -1604,7 +1634,9 @@
       "end": 980,
       "entity_type": "DIETARY_HABIT",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Are you a shaka Hari or mixed"
     },
     {
       "span": "father",
@@ -1612,7 +1644,9 @@
       "end": 386,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "What is your father 's name"
     },
     {
       "span": "mother",
@@ -1620,7 +1654,9 @@
       "end": 802,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "PRESENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "For my mother"
     },
     {
       "span": "last 6 months",
@@ -1628,7 +1664,9 @@
       "end": 1183,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Have you ever lost weight in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1636,7 +1674,9 @@
       "end": 1242,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1644,7 +1684,9 @@
       "end": 1301,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1652,7 +1694,9 @@
       "end": 1360,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1660,7 +1704,9 @@
       "end": 1419,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1668,7 +1714,9 @@
       "end": 1478,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1676,7 +1724,9 @@
       "end": 1537,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1684,7 +1734,9 @@
       "end": 1596,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1692,7 +1744,9 @@
       "end": 1655,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1700,7 +1754,9 @@
       "end": 1714,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1708,7 +1764,9 @@
       "end": 1773,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     },
     {
       "span": "last 6 months",
@@ -1716,7 +1774,9 @@
       "end": 1832,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "ABSENT"
+      "assertion": "PRESENT",
+      "assertion_reason": "MENTION_WITHOUT_NEGATION",
+      "assertion_context": "ever been sick or tired in the last 6 months"
     }
   ],
   "relations": [
@@ -1730,7 +1790,7 @@
         "span": "mother",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "ABSENT"
+      "assertion": "UNKNOWN"
     },
     {
       "relation_type": "FamilyHistory_Of",
@@ -1742,7 +1802,7 @@
         "span": "mother",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "PRESENT"
+      "assertion": "UNKNOWN"
     },
     {
       "relation_type": "Status_Of",
@@ -1751,7 +1811,7 @@
         "type": "RISK_FACTOR_TOBACCO"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     },
     {
@@ -1761,7 +1821,7 @@
         "type": "RISK_FACTOR_TOBACCO"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     },
     {
@@ -1771,7 +1831,7 @@
         "type": "RISK_FACTOR_TOBACCO"
       },
       "tail": {
-        "assertion": "ABSENT"
+        "assertion": "UNKNOWN"
       }
     }
   ],

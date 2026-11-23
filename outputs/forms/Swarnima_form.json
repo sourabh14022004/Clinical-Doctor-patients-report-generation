@@ -1,4 +1,5 @@
 {
+  "schema_version": "2.0",
   "institution": "Government Institute of Medical Science, Greater Noida",
   "form_title": "Cancer Health Check up",
   "patient_id": "Swarnima",
@@ -6,104 +7,279 @@
     "name": "Swaidema",
     "age": 30,
     "dob": "35, 1995",
-    "sex": "Female",
+    "sex": null,
     "education": "MBBS",
     "occupation": "PGJR (Junior Resident)",
     "marital_status": "Married",
-    "address": "Noida, UP",
-    "mobile": "9634555555",
+    "address": "Noida",
+    "mobile": null,
     "father_or_husband_name": "Raja Vashne",
-    "monthly_family_income": "2 Lakhs / month",
+    "monthly_family_income": "In a month. 2 lakhs",
     "health_insurance": "No"
   },
   "clinical_indicators": {
     "weight_kg": 64.0,
-    "height": "5. 2.",
+    "height": "5. 2",
     "bmi": null,
-    "pulse": "Normal",
-    "rr": "Normal",
-    "bp": "Normal"
+    "pulse": null,
+    "rr": null,
+    "bp": null
   },
   "history": {
     "past_medical_history": {
-      "present": false,
-      "details": "None",
-      "assertion": "ABSENT"
+      "present": null,
+      "details": null,
+      "assertion": "UNKNOWN",
+      "evidence": null
     },
     "ever_screened_for_cancer": {
-      "screened": false,
-      "details": "Never screened",
-      "assertion": "ABSENT"
+      "screened": null,
+      "details": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "family_history_of_cancer": {
       "present": false,
       "cancer_type": null,
       "relative": null,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No"
     },
     "consumed_tobacco_or_alcohol": {
       "present": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever consumed alcohol or tobacco?"
     }
   },
   "risk_factors": {
     "current_tobacco_use": {
-      "current_user": false,
-      "smoked": false,
-      "smokeless": false,
-      "duration": "None"
+      "current_user": null,
+      "assertion": "UNKNOWN",
+      "smoked": null,
+      "smokeless": null,
+      "duration": null,
+      "evidence": null,
+      "source_question": null
     },
-    "alcohol_consumption": "Never",
+    "alcohol_consumption": null,
     "dietary_habits": "Predominantly Vegetarian",
-    "fast_food_habit": "No",
-    "physical_activity_level": "Sedentary"
+    "fast_food_habit": {
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": "Vegetarian. Vegetarian",
+      "source_question": "Vegetarian or fried food?"
+    },
+    "physical_activity_level": "No/low activity reported"
   },
   "general_cancer_symptoms": {
     "unexplained_weight_loss": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever lost weight in the last 6 months?"
     },
     "persistent_fever_or_fatigue": {
       "reported": false,
-      "assertion": "ABSENT"
+      "assertion": "ABSENT",
+      "evidence": "No",
+      "source_question": "Have you ever had a long fever or tired in the last 6 months?"
     },
     "non_healing_ulcer_or_wound": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "lump_or_swelling_anywhere": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "persistent_pain_without_known_cause": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "bleeding_from_any_site": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "known_chronic_illness_dm_htn_tb": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     }
   },
   "oral_cancer_screening": {
     "difficulty_in_opening_mouth": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "white_or_red_patch_in_mouth": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "ulcer_in_mouth_lasting_gt_2_weeks": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     },
     "difficulty_in_chewing_or_swallowing": {
-      "reported": false,
-      "assertion": "ABSENT"
+      "reported": null,
+      "assertion": "UNKNOWN",
+      "evidence": null,
+      "source_question": null
     }
-  }
+  },
+  "extraction_evidence": {
+    "demographics.name": {
+      "question": "What is your name?",
+      "answer": "Swaidema"
+    },
+    "demographics.age": {
+      "question": "And what is your age?",
+      "answer": "30"
+    },
+    "demographics.dob": {
+      "question": "And what is your date of birth?",
+      "answer": "35, 1995"
+    },
+    "demographics.education": {
+      "question": "And where have you studied?",
+      "answer": "I have done MBBS"
+    },
+    "demographics.occupation": {
+      "question": "And what are you doing now?",
+      "answer": "I am PGJR in the community medicine department"
+    },
+    "demographics.marital_status": {
+      "question": "You are married?",
+      "answer": "Yes"
+    },
+    "demographics.address": {
+      "question": "And what is your address?",
+      "answer": "Noida"
+    },
+    "demographics.mobile": {
+      "question": "Will you tell me your phone number?",
+      "answer": "9-6-3-4-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5"
+    },
+    "demographics.father_or_husband_name": {
+      "question": "What is your husband's name?",
+      "answer": "Raja Vashne"
+    },
+    "demographics.monthly_family_income": {
+      "question": "How much is your monthly family income?",
+      "answer": "In a month. 2 lakhs"
+    },
+    "demographics.health_insurance": {
+      "question": "Do you have any health insurance?",
+      "answer": "No"
+    },
+    "clinical_indicators.weight_kg": {
+      "question": "How much is your weight?",
+      "answer": "64"
+    },
+    "clinical_indicators.height": {
+      "question": "And what is your height?",
+      "answer": "5. 2"
+    },
+    "history.past_medical_history": {
+      "question": null,
+      "answer": null
+    },
+    "history.ever_screened_for_cancer": {
+      "question": null,
+      "answer": null
+    },
+    "history.family_history_of_cancer": {
+      "question": "Is there anyone in your family who has ever had cancer?",
+      "answer": "No"
+    },
+    "history.consumed_tobacco_or_alcohol": {
+      "question": "Have you ever consumed alcohol or tobacco?",
+      "answer": "No"
+    },
+    "risk_factors.current_tobacco_use": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.alcohol_consumption": {
+      "question": null,
+      "answer": null
+    },
+    "risk_factors.dietary_habits": {
+      "question": "Vegetarian or fried food?",
+      "answer": "Vegetarian. Vegetarian"
+    },
+    "risk_factors.fast_food_habit": {
+      "question": "Vegetarian or fried food?",
+      "answer": "Vegetarian. Vegetarian"
+    },
+    "risk_factors.physical_activity_level": {
+      "question": "Do you exercise daily or sometimes you don't exercise at all?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.known_chronic_illness_dm_htn_tb": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.unexplained_weight_loss": {
+      "question": "Have you ever lost weight in the last 6 months?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.persistent_fever_or_fatigue": {
+      "question": "Have you ever had a long fever or tired in the last 6 months?",
+      "answer": "No"
+    },
+    "general_cancer_symptoms.non_healing_ulcer_or_wound": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.lump_or_swelling_anywhere": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.persistent_pain_without_known_cause": {
+      "question": null,
+      "answer": null
+    },
+    "general_cancer_symptoms.bleeding_from_any_site": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.difficulty_in_opening_mouth": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.white_or_red_patch_in_mouth": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.ulcer_in_mouth_lasting_gt_2_weeks": {
+      "question": null,
+      "answer": null
+    },
+    "oral_cancer_screening.difficulty_in_chewing_or_swallowing": {
+      "question": null,
+      "answer": null
+    }
+  },
+  "processing_notes": [
+    "Unanswered fields are UNKNOWN/null and are not interpreted as negative.",
+    "Sex, weight, height and other demographics are not inferred from patient identifiers.",
+    "Generated output requires clinician review before any real-world use."
+  ]
 }
