@@ -18,6 +18,7 @@ from typing import List, Dict, Any
 from medical_ner import ClinicalNEREngine
 from form_populator import CancerScreeningFormPopulator
 from evaluate import PipelineEvaluator
+from evaluate_m4 import M4Evaluator
 
 
 def run_transcription(audio_path: str, model_path: str = "models/ggml-small.bin") -> Dict[str, str]:
@@ -123,9 +124,20 @@ def main():
     print(f"==================================================")
     evaluator = PipelineEvaluator()
     summary = evaluator.evaluate_all()
-    print(f"[✓] Overall Ground-Truth Accuracy: {summary.get('overall_accuracy_percent')}%")
-    print(f"[✓] Evaluated {summary.get('total_evaluated_fields')} fields across patients ({summary.get('total_matched_fields')} concordant)")
-    print(f"[✓] Evaluation report generated at outputs/eval/evaluation_report.md")
+    print(f"[!] Legacy binary field agreement: {summary.get('overall_accuracy_percent')}%")
+    print(f"[!] Compared {summary.get('total_evaluated_fields')} fields ({summary.get('total_matched_fields')} matched).")
+    print("[!] This legacy metric is NOT clinical accuracy and does not yet handle UNKNOWN/POSSIBLE correctly.")
+    print(f"[✓] Legacy comparison output: outputs/eval/evaluation_report.md")
+
+    print(f"\n==================================================")
+    print(f"  RUNNING M4 FOUR-STATE EVALUATION")
+    print(f"==================================================")
+    m4_summary = M4Evaluator().run()
+    m4_fields = m4_summary["field_evaluation"]["assertion_metrics"]
+    print(f"[✓] M4 exact four-state agreement: {M4Evaluator._pct(m4_fields['exact_accuracy'])}")
+    print(f"[✓] M4 prediction coverage: {M4Evaluator._pct(m4_fields['prediction_coverage'])}")
+    print(f"[!] NER metrics available: {m4_summary['ner_evaluation'].get('available', False)}")
+    print(f"[✓] M4 report: outputs/eval/m4/M4_EVALUATION_REPORT.md")
     print(f"\nPipeline successfully completed!")
 
 
