@@ -168,6 +168,12 @@ class PipelineEvaluator:
         overall_acc = round(total_matches / total_evaluated * 100, 1) if total_evaluated > 0 else 0.0
 
         summary = {
+            "metric_label": "Legacy binary field agreement",
+            "is_clinical_accuracy": False,
+            "warning": (
+                "Legacy comparator only. It does not correctly model PRESENT/ABSENT/POSSIBLE/UNKNOWN; "
+                "unknown values may be treated as negative in binary checks. Do not report this as clinical accuracy."
+            ),
             "overall_accuracy_percent": overall_acc,
             "total_evaluated_fields": total_evaluated,
             "total_matched_fields": total_matches,
@@ -179,10 +185,12 @@ class PipelineEvaluator:
             json.dump(summary, f, indent=2)
 
         # Generate Evaluation Report Markdown
-        report_md = f"""# Clinical Pipeline Evaluation Report
-## Benchmarking Extracted Records Against Ground-Truth Clinical Forms (GIMS)
+        report_md = f"""# LEGACY Field-Agreement Report (Not Clinical Accuracy)
+## Historical binary comparison against structured reference forms
 
-**Overall Form Field Accuracy:** **{overall_acc}%**  
+> **Warning:** This legacy comparator does not correctly model PRESENT / ABSENT / POSSIBLE / UNKNOWN. Unknown values may be counted as negative in binary checks. Do not interpret or present this score as clinical accuracy, diagnostic performance or model quality.
+
+**Legacy Field Agreement:** **{overall_acc}%**  
 **Total Ground-Truth Fields Evaluated:** **{total_evaluated}**  
 **Total Accurately Populated Fields:** **{total_matches}**
 
