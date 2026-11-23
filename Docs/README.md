@@ -1,0 +1,1 @@
+This folder is reserved for locally controlled clinical source documents. Do not add patient-identifiable scans or records to a public Git repository. Use appropriately consented and de-identified examples for demonstrations.
