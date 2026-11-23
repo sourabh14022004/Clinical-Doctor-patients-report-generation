@@ -1,13 +1,16 @@
 {
-  "overall_accuracy_percent": 100.0,
+  "metric_label": "Legacy binary field agreement",
+  "is_clinical_accuracy": false,
+  "warning": "Legacy comparator only. It does not correctly model PRESENT/ABSENT/POSSIBLE/UNKNOWN; unknown values may be treated as negative in binary checks. Do not report this as clinical accuracy.",
+  "overall_accuracy_percent": 47.2,
   "total_evaluated_fields": 72,
-  "total_matched_fields": 72,
+  "total_matched_fields": 34,
   "patient_benchmarks": [
     {
       "patient_id": "Praveen",
       "total_fields_evaluated": 18,
-      "matched_fields": 18,
-      "accuracy_percent": 100.0,
+      "matched_fields": 8,
+      "accuracy_percent": 44.4,
       "field_comparisons": [
         {
           "field": "Age",
@@ -18,8 +21,8 @@
         {
           "field": "Sex",
           "ground_truth": "Male",
-          "extracted": "Male",
-          "match": true
+          "extracted": "None",
+          "match": false
         },
         {
           "field": "Marital Status",
@@ -49,7 +52,7 @@
           "field": "Current Tobacco Use",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Unexplained Weight Loss",
@@ -67,25 +70,25 @@
           "field": "General Symptom: Non-healing Ulcer / Wound",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Lump / Swelling in Body",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Persistent Pain",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Bleeding from Any Site",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Known Chronic Illness",
@@ -97,33 +100,33 @@
           "field": "Oral: Difficulty Opening Mouth",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: White / Red Patch",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Ulcer > 2 Weeks",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Chewing / Swallowing Difficulty",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         }
       ]
     },
     {
       "patient_id": "Priyanshi",
       "total_fields_evaluated": 18,
-      "matched_fields": 18,
-      "accuracy_percent": 100.0,
+      "matched_fields": 15,
+      "accuracy_percent": 83.3,
       "field_comparisons": [
         {
           "field": "Age",
@@ -134,8 +137,8 @@
         {
           "field": "Sex",
           "ground_truth": "Female",
-          "extracted": "Female",
-          "match": true
+          "extracted": "None",
+          "match": false
         },
         {
           "field": "Marital Status",
@@ -165,7 +168,7 @@
           "field": "Current Tobacco Use",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Unexplained Weight Loss",
@@ -231,15 +234,15 @@
           "field": "Oral: Chewing / Swallowing Difficulty",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         }
       ]
     },
     {
       "patient_id": "Swarnima",
       "total_fields_evaluated": 18,
-      "matched_fields": 18,
-      "accuracy_percent": 100.0,
+      "matched_fields": 7,
+      "accuracy_percent": 38.9,
       "field_comparisons": [
         {
           "field": "Age",
@@ -250,8 +253,8 @@
         {
           "field": "Sex",
           "ground_truth": "Female",
-          "extracted": "Female",
-          "match": true
+          "extracted": "None",
+          "match": false
         },
         {
           "field": "Marital Status",
@@ -281,7 +284,7 @@
           "field": "Current Tobacco Use",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Unexplained Weight Loss",
@@ -299,63 +302,63 @@
           "field": "General Symptom: Non-healing Ulcer / Wound",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Lump / Swelling in Body",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Persistent Pain",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Bleeding from Any Site",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Known Chronic Illness",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Difficulty Opening Mouth",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: White / Red Patch",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Ulcer > 2 Weeks",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Chewing / Swallowing Difficulty",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         }
       ]
     },
     {
       "patient_id": "Uday",
       "total_fields_evaluated": 18,
-      "matched_fields": 18,
-      "accuracy_percent": 100.0,
+      "matched_fields": 4,
+      "accuracy_percent": 22.2,
       "field_comparisons": [
         {
           "field": "Age",
@@ -366,8 +369,8 @@
         {
           "field": "Sex",
           "ground_truth": "Male",
-          "extracted": "Male",
-          "match": true
+          "extracted": "None",
+          "match": false
         },
         {
           "field": "Marital Status",
@@ -378,14 +381,14 @@
         {
           "field": "Insurance",
           "ground_truth": "No",
-          "extracted": "No",
-          "match": true
+          "extracted": "None",
+          "match": false
         },
         {
           "field": "Weight (kg)",
           "ground_truth": "78.0",
-          "extracted": "78.0",
-          "match": true
+          "extracted": "None",
+          "match": false
         },
         {
           "field": "Family History of Cancer",
@@ -397,43 +400,43 @@
           "field": "Current Tobacco Use",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Unexplained Weight Loss",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Persistent Fever / Fatigue",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Non-healing Ulcer / Wound",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Lump / Swelling in Body",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Persistent Pain",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Bleeding from Any Site",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "General Symptom: Known Chronic Illness",
@@ -445,25 +448,25 @@
           "field": "Oral: Difficulty Opening Mouth",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: White / Red Patch",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Ulcer > 2 Weeks",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         },
         {
           "field": "Oral: Chewing / Swallowing Difficulty",
           "ground_truth": "NO",
           "extracted": "NO",
-          "match": true
+          "match": false
         }
       ]
     }

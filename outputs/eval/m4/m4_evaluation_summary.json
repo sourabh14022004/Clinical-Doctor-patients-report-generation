@@ -1,0 +1,272 @@
+{
+  "evaluation_version": "M4-1.0",
+  "metric_scope": "four-state clinical-field agreement plus independently annotated NER",
+  "not_a_clinical_validation": true,
+  "field_evaluation": {
+    "matched_case_count": 4,
+    "ground_truth_case_count": 5,
+    "generated_form_case_count": 5,
+    "unmatched_ground_truth_count": 1,
+    "unmatched_generated_form_count": 1,
+    "assertion_field_count_per_case": 14,
+    "assertion_metrics": {
+      "n_scorable": 56,
+      "excluded_unknown_gold": 0,
+      "correct": 22,
+      "exact_accuracy": 0.39285714285714285,
+      "prediction_coverage": 0.39285714285714285,
+      "selective_accuracy": 1.0,
+      "abstentions": 34,
+      "gold_class_support": {
+        "PRESENT": 2,
+        "ABSENT": 54
+      },
+      "per_class": {
+        "PRESENT": {
+          "support": 2,
+          "predicted_count": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ABSENT": {
+          "support": 54,
+          "predicted_count": 20,
+          "precision": 1.0,
+          "recall": 0.37037037037037035,
+          "f1": 0.5405405405405406
+        },
+        "POSSIBLE": {
+          "support": 0,
+          "predicted_count": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "UNKNOWN": {
+          "support": 0,
+          "predicted_count": 34,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "PRESENT": {
+          "PRESENT": 2,
+          "ABSENT": 0,
+          "POSSIBLE": 0,
+          "UNKNOWN": 0
+        },
+        "ABSENT": {
+          "PRESENT": 0,
+          "ABSENT": 20,
+          "POSSIBLE": 0,
+          "UNKNOWN": 34
+        },
+        "POSSIBLE": {
+          "PRESENT": 0,
+          "ABSENT": 0,
+          "POSSIBLE": 0,
+          "UNKNOWN": 0
+        },
+        "UNKNOWN": {
+          "PRESENT": 0,
+          "ABSENT": 0,
+          "POSSIBLE": 0,
+          "UNKNOWN": 0
+        }
+      },
+      "macro_f1_over_supported_gold_classes": 0.7702702702702703,
+      "present_sensitivity": 1.0,
+      "present_sensitivity_available": true
+    },
+    "present_gold_support_by_field": {
+      "Family history of cancer": 2
+    },
+    "evidence_profile": {
+      "question_and_answer_present": 22,
+      "no_matched_question_or_answer": 34
+    },
+    "unknown_predictions_with_evidence": 0,
+    "per_field": {
+      "Family history of cancer": {
+        "gold_support": {
+          "PRESENT": 2,
+          "ABSENT": 2
+        },
+        "n_scorable": 4,
+        "correct": 4,
+        "exact_accuracy": 1.0,
+        "prediction_coverage": 1.0,
+        "abstentions": 0
+      },
+      "Past tobacco or alcohol use": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 2,
+        "exact_accuracy": 0.5,
+        "prediction_coverage": 0.5,
+        "abstentions": 2
+      },
+      "Current tobacco use": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 0,
+        "exact_accuracy": 0.0,
+        "prediction_coverage": 0.0,
+        "abstentions": 4
+      },
+      "Unexplained weight loss": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 3,
+        "exact_accuracy": 0.75,
+        "prediction_coverage": 0.75,
+        "abstentions": 1
+      },
+      "Persistent fever or fatigue": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 3,
+        "exact_accuracy": 0.75,
+        "prediction_coverage": 0.75,
+        "abstentions": 1
+      },
+      "Non-healing ulcer or wound": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "Lump or swelling": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "Persistent pain": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "Bleeding from any site": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "Known chronic illness": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 3,
+        "exact_accuracy": 0.75,
+        "prediction_coverage": 0.75,
+        "abstentions": 1
+      },
+      "Difficulty opening mouth": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "White or red oral patch": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "Oral ulcer over two weeks": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 1,
+        "exact_accuracy": 0.25,
+        "prediction_coverage": 0.25,
+        "abstentions": 3
+      },
+      "Difficulty chewing or swallowing": {
+        "gold_support": {
+          "ABSENT": 4
+        },
+        "n_scorable": 4,
+        "correct": 0,
+        "exact_accuracy": 0.0,
+        "prediction_coverage": 0.0,
+        "abstentions": 4
+      }
+    },
+    "numeric_metrics": {
+      "Age": {
+        "support": 4,
+        "mae": 0.0,
+        "exact_matches": 4,
+        "exact_agreement": 1.0,
+        "within_tolerance_count": 4,
+        "within_tolerance_rate": 1.0,
+        "tolerance": 0.0
+      },
+      "Weight (kg)": {
+        "support": 3,
+        "mae": 0.0,
+        "exact_matches": 3,
+        "exact_agreement": 1.0,
+        "within_tolerance_count": 3,
+        "within_tolerance_rate": 1.0,
+        "tolerance": 2.0
+      }
+    },
+    "numeric_comparison_count": 7
+  },
+  "ner_evaluation": {
+    "available": false,
+    "reason": "No independently annotated case is marked annotation_status='complete'. NER and assertion performance metrics cannot yet be calculated.",
+    "completed_annotation_cases": 0,
+    "pending_or_missing_annotation_cases": 5,
+    "invalid_annotation_cases": 0
+  },
+  "baseline_output_state_audit": null,
+  "limitations": [
+    "The supplied reference set is small and only matching case IDs are compared.",
+    "The 11 symptom fields in the supplied reference records are all ABSENT; positive-case sensitivity cannot be estimated from this set.",
+    "NER precision/recall/F1 are unavailable until independent gold annotations are completed.",
+    "Structured-form agreement does not establish clinical safety or diagnostic performance.",
+    "Every generated clinical record requires qualified human review."
+  ]
+}

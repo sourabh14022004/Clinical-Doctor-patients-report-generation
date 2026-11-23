@@ -1,0 +1,559 @@
+{
+  "assertion_fields": [
+    {
+      "case": "case_001",
+      "field": "Family history of cancer",
+      "gold": "PRESENT",
+      "prediction": "PRESENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_001",
+      "field": "Past tobacco or alcohol use",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Unexplained weight loss",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_001",
+      "field": "Persistent fever or fatigue",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_001",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Known chronic illness",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_001",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_001",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_002",
+      "field": "Family history of cancer",
+      "gold": "PRESENT",
+      "prediction": "PRESENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Past tobacco or alcohol use",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_002",
+      "field": "Unexplained weight loss",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Persistent fever or fatigue",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Known chronic illness",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_002",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Family history of cancer",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_003",
+      "field": "Past tobacco or alcohol use",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_003",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Unexplained weight loss",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_003",
+      "field": "Persistent fever or fatigue",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_003",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Known chronic illness",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_003",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Family history of cancer",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_004",
+      "field": "Past tobacco or alcohol use",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Unexplained weight loss",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Persistent fever or fatigue",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Known chronic illness",
+      "gold": "ABSENT",
+      "prediction": "ABSENT",
+      "match": true,
+      "evidence_question_present": true,
+      "evidence_answer_present": true
+    },
+    {
+      "case": "case_004",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    },
+    {
+      "case": "case_004",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "prediction": "UNKNOWN",
+      "match": false,
+      "evidence_question_present": false,
+      "evidence_answer_present": false
+    }
+  ],
+  "numeric_fields": [
+    {
+      "case": "case_001",
+      "field": "Age",
+      "gold": 30.0,
+      "prediction": 30.0,
+      "tolerance": 0.0
+    },
+    {
+      "case": "case_001",
+      "field": "Weight (kg)",
+      "gold": 58.0,
+      "prediction": 58.0,
+      "tolerance": 2.0
+    },
+    {
+      "case": "case_002",
+      "field": "Age",
+      "gold": 26.0,
+      "prediction": 26.0,
+      "tolerance": 0.0
+    },
+    {
+      "case": "case_002",
+      "field": "Weight (kg)",
+      "gold": 70.0,
+      "prediction": 70.0,
+      "tolerance": 2.0
+    },
+    {
+      "case": "case_003",
+      "field": "Age",
+      "gold": 30.0,
+      "prediction": 30.0,
+      "tolerance": 0.0
+    },
+    {
+      "case": "case_003",
+      "field": "Weight (kg)",
+      "gold": 64.0,
+      "prediction": 64.0,
+      "tolerance": 2.0
+    },
+    {
+      "case": "case_004",
+      "field": "Age",
+      "gold": 32.0,
+      "prediction": 32.0,
+      "tolerance": 0.0
+    }
+  ]
+}
