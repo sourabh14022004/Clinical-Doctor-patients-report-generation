@@ -219,42 +219,72 @@ class ClinicalNEREngine:
         return entities
 
     def detect_assertions(self, text: str, entities: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Assign a conservative assertion label using local, clause-scoped context.
+
+        The previous implementation searched a fixed 120-character window. That could
+        incorrectly transfer a negation from one symptom to a nearby unrelated entity.
+        This version limits evidence to the current clause and a small token window.
+        Entity mentions inside clinician-style questions are UNKNOWN until an answer is
+        linked explicitly; a mention in a question is not proof that a patient has it.
         """
-        Detects assertion status for each entity:
-        - PRESENT (Affirmed)
-        - ABSENT (Negated)
-        - POSSIBLE (Suspected/Uncertain)
-        """
-        negation_terms = [
-            r"\bno\b", r"\bnot\b", r"\bdenies\b", r"\bnever\b", r"\bwithout\b",
-            r"\bनहीं\b", r"\bना\b", r"\bकभी नहीं\b"
-        ]
-        possible_terms = [
-            r"\bpossible\b", r"\bsuspected\b", r"\bmaybe\b", r"\brule out\b",
-            r"\bशायद\b", r"\bहो सकता है\b"
-        ]
+        negation_before = re.compile(
+            r"(?:\bno\b|\bnot\b|\bden(?:y|ies|ied)\b|\bnever\b|"
+            r"\bwithout\b|\bnegative\s+for\b|\bfree\s+of\b|"
+            r"\bनहीं\b|\bना\b|\bकभी नहीं\b)", re.IGNORECASE
+        )
+        negation_after = re.compile(
+            r"^\s*(?:is|was|are|were)?\s*(?:absent|negative|not present|ruled out)\b",
+            re.IGNORECASE
+        )
+        possible_pattern = re.compile(
+            r"\b(possible|possibly|suspected|maybe|might|may be|rule out|"
+            r"शायद|हो सकता है)\b", re.IGNORECASE
+        )
+        question_pattern = re.compile(
+            r"(?:\bdo\s+you\b|\bhave\s+you\b|\bdid\s+you\b|"
+            r"\bare\s+you\b|\bany\b.{0,35}$|\bwhether\b|क्या|क्या आपको)",
+            re.IGNORECASE
+        )
 
         enriched = []
         for ent in entities:
-            # Look at a surrounding window of 60 characters before and after the entity
-            window_start = max(0, ent["start"] - 60)
-            window_end = min(len(text), ent["end"] + 60)
-            context = text[window_start:window_end].lower()
+            start = int(ent.get("start", 0))
+            end = int(ent.get("end", start))
 
-            assertion = "PRESENT"
-            for n_term in negation_terms:
-                if re.search(n_term, context, re.IGNORECASE):
-                    assertion = "ABSENT"
-                    break
-            
-            if assertion == "PRESENT":
-                for p_term in possible_terms:
-                    if re.search(p_term, context, re.IGNORECASE):
-                        assertion = "POSSIBLE"
-                        break
+            # Bound the context to the entity's sentence/clause.
+            left_boundary = max(text.rfind(mark, 0, start) for mark in (".", "?", "!", ";", "\n")) + 1
+            right_candidates = [text.find(mark, end) for mark in (".", "?", "!", ";", "\n")]
+            right_candidates = [pos for pos in right_candidates if pos >= 0]
+            right_boundary = min(right_candidates) if right_candidates else len(text)
+            clause_before = text[left_boundary:start]
+            clause_after = text[end:right_boundary]
+
+            # Consider only a short token window immediately before the entity.
+            # Contrastive conjunctions reset the local assertion scope:
+            # "no fever, but pain" must not negate pain.
+            scoped_before = re.split(r"\b(?:but|however|although|except)\b", clause_before, flags=re.IGNORECASE)[-1]
+            before_tokens = scoped_before.split()
+            local_before = " ".join(before_tokens[-7:])
+            after_prefix = " ".join(clause_after.split()[:5])
+            local_context = (local_before + " " + ent.get("span", "") + " " + after_prefix).strip()
+
+            if question_pattern.search(local_before):
+                assertion = "UNKNOWN"
+                reason = "MENTION_IN_QUESTION"
+            elif possible_pattern.search(local_context):
+                assertion = "POSSIBLE"
+                reason = "UNCERTAINTY_CUE"
+            elif negation_before.search(local_before) or negation_after.search(clause_after):
+                assertion = "ABSENT"
+                reason = "LOCAL_NEGATION_CUE"
+            else:
+                assertion = "PRESENT"
+                reason = "MENTION_WITHOUT_NEGATION"
 
             item = dict(ent)
             item["assertion"] = assertion
+            item["assertion_reason"] = reason
+            item["assertion_context"] = local_context
             enriched.append(item)
 
         return enriched
@@ -280,7 +310,7 @@ class ClinicalNEREngine:
                         "relation_type": "FamilyHistory_Of",
                         "head": {"span": c["span"], "type": c["entity_type"]},
                         "tail": {"span": r["span"], "type": r["entity_type"]},
-                        "assertion": c.get("assertion", "PRESENT")
+                        "assertion": c.get("assertion", "UNKNOWN")
                     })
 
         # Find Risk Factor -> Assertion / Duration relations
@@ -290,7 +320,7 @@ class ClinicalNEREngine:
             relations.append({
                 "relation_type": "Status_Of",
                 "head": {"span": rf["span"], "type": rf["entity_type"]},
-                "tail": {"assertion": rf.get("assertion", "ABSENT")},
+                "tail": {"assertion": rf.get("assertion", "UNKNOWN")},
             })
             for d in durations:
                 if abs(rf["start"] - d["start"]) < 80:
