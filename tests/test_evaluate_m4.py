@@ -6,9 +6,15 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
 
-from evaluate_m4 import M4Evaluator, classification_metrics, normalize_assertion
+try:
+    from src.evaluate_m4 import M4Evaluator, classification_metrics, normalize_assertion
+except ImportError:
+    from evaluate_m4 import M4Evaluator, classification_metrics, normalize_assertion
 
 
 class NormalizeAssertionTests(unittest.TestCase):

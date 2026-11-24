@@ -20,8 +20,10 @@ function toast(message) {
   toast.timer = window.setTimeout(() => node.classList.remove("visible"), 3200);
 }
 function setApiStatus(ok, message) {
-  $("api-status").classList.toggle("offline", !ok);
-  $("api-status").innerHTML = `<span class="status-dot"></span>${esc(message)}`;
+  const el = $("api-status");
+  if (!el) return;
+  el.classList.toggle("offline", !ok);
+  el.innerHTML = `<span class="status-dot"></span>${esc(message)}`;
 }
 async function api(path, options = {}) {
   const response = await fetch(path, { cache: "no-store", ...options });
@@ -56,10 +58,11 @@ function bindEvents() {
 }
 
 function renderHealth(health) {
-  const parts = ["Local server" ];
+  const parts = ["Local server"];
   if (health.whisper_cli_available && health.whisper_model_available) parts.push("Whisper ready");
   else parts.push("transcription setup required");
-  $("api-status").title = `Python ${health.python_version}; ${parts.join("; ")}`;
+  const el = $("api-status");
+  if (el) el.title = `Python ${health.python_version}; ${parts.join("; ")}`;
 }
 
 async function refreshCases() {

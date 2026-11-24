@@ -13,12 +13,26 @@ import os
 import glob
 import json
 import subprocess
+from pathlib import Path
 from typing import List, Dict, Any
 
-from medical_ner import ClinicalNEREngine
-from form_populator import CancerScreeningFormPopulator
-from evaluate import PipelineEvaluator
-from evaluate_m4 import M4Evaluator
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+SRC_DIR = Path(__file__).resolve().parent
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+try:
+    from src.medical_ner import ClinicalNEREngine
+    from src.form_populator import CancerScreeningFormPopulator
+    from src.evaluate import PipelineEvaluator
+    from src.evaluate_m4 import M4Evaluator
+except ImportError:
+    from medical_ner import ClinicalNEREngine
+    from form_populator import CancerScreeningFormPopulator
+    from evaluate import PipelineEvaluator
+    from evaluate_m4 import M4Evaluator
 
 
 def run_transcription(audio_path: str, model_path: str = "models/ggml-small.bin") -> Dict[str, str]:
