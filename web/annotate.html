@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NER Annotation Tool</title>
+<style>
+  :root { --bg:#f4f7fb; --card:#fff; --ink:#1d2939; --muted:#667085; --line:#e4e7ec; --accent:#2563eb; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.5 -apple-system, system-ui, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:14px 24px; background:var(--card); border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:17px; margin:0 12px 0 0; }
+  main { display:grid; grid-template-columns: minmax(0,1.6fr) minmax(320px,1fr); gap:16px; padding:16px 24px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .card h2 { font-size:14px; margin:0 0 10px; }
+  #text { white-space:pre-wrap; font-size:15px; line-height:1.9; max-height:72vh; overflow:auto; user-select:text; }
+  mark { border-radius:3px; padding:1px 0; cursor:pointer; }
+  mark small { font-size:10px; font-weight:600; opacity:.75; margin-left:2px; }
+  .muted { color:var(--muted); }
+  label { font-size:12px; color:var(--muted); display:block; margin-bottom:2px; }
+  select, input[type=text] { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; }
+  button { font:inherit; padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  td, th { text-align:left; padding:4px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  #popup { position:absolute; display:none; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; box-shadow:0 8px 24px rgba(0,0,0,.12); z-index:5; }
+  #popup .row { display:flex; gap:8px; align-items:end; }
+  .help { font-size:12.5px; }
+  .help li { margin-bottom:3px; }
+  .warn { background:#fff7e6; border:1px solid #f5c26b; padding:8px 10px; border-radius:8px; font-size:12.5px; }
+  .dis { border:1px solid var(--line); border-radius:8px; padding:8px; margin-bottom:8px; font-size:13px; }
+  .dis .btns { display:flex; gap:6px; margin-top:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>NER Annotation Tool</h1>
+  <div><label for="file">1. Load template (<code>outputs/annotations/&lt;case&gt;_gold.json</code>)</label><input id="file" type="file" accept=".json"></div>
+  <div><label for="annotator">2. Your annotator ID</label><input id="annotator" type="text" placeholder="e.g. r1 or r2" size="10"></div>
+  <div><label>&nbsp;</label><button id="save" class="primary" disabled>Download my annotations</button></div>
+  <span id="status" class="muted"></span>
+</header>
+<main>
+  <section class="card">
+    <h2 id="title">Transcript</h2>
+    <div id="text" class="muted">Load an annotation template to begin. Select text with the mouse to tag an entity.</div>
+  </section>
+  <aside>
+    <section class="card" id="dis-card" style="display:none; margin-bottom:16px">
+      <h2>Adjudication: disagreements (<span id="dis-count">0</span>)</h2>
+      <div id="dis-list"></div>
+    </section>
+    <section class="card" style="margin-bottom:16px">
+      <h2>Annotations (<span id="count">0</span>)</h2>
+      <div style="max-height:40vh; overflow:auto"><table><thead><tr><th>Text</th><th>Type</th><th>Assertion</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+    </section>
+    <section class="card help">
+      <h2>Guidelines</h2>
+      <div class="warn">Annotate <b>independently</b>. Do not open the model's predictions or your teammate's file before you finish.</div>
+      <ul>
+        <li>Tag the <b>smallest span</b> that names the concept: "breast cancer", not "had breast cancer".</li>
+        <li>Tag mentions in <b>questions too</b>, with assertion <b>UNKNOWN</b> ("Do you have <u>fever</u>?").</li>
+        <li><b>PRESENT</b> = patient affirms · <b>ABSENT</b> = patient denies · <b>POSSIBLE</b> = unsure · <b>UNKNOWN</b> = question / not established.</li>
+        <li>Demographic values (age, phone, income...) use assertion PRESENT.</li>
+        <li>Click a highlight to delete it. Download often; nothing is uploaded anywhere.</li>
+      </ul>
+    </section>
+  </aside>
+</main>
+<div id="popup">
+  <div class="row">
+    <div><label>Entity type</label><select id="type"></select></div>
+    <div><label>Assertion</label><select id="assertion"><option>PRESENT</option><option>ABSENT</option><option>POSSIBLE</option><option>UNKNOWN</option></select></div>
+    <button id="add" class="primary">Add</button><button id="cancel">✕</button>
+  </div>
+  <div id="sel-preview" class="muted" style="margin-top:6px; font-size:12px"></div>
+</div>
+<script>
+"use strict";
+const TYPES = ["PATIENT_NAME","AGE","DOB","EDUCATION","OCCUPATION","MARITAL_STATUS","ADDRESS","CONTACT_PHONE","FAMILY_INCOME","HEALTH_INSURANCE","WEIGHT","HEIGHT","SIGN_SYMPTOM","DIAGNOSIS","CANCER_TYPE","ORAL_SIGN","RISK_FACTOR_TOBACCO","RISK_FACTOR_ALCOHOL","DIETARY_HABIT","PHYSICAL_ACTIVITY","FAMILY_MEMBER","DURATION"];
+const COLORS = {SIGN_SYMPTOM:"#fde68a",DIAGNOSIS:"#fecaca",CANCER_TYPE:"#fca5a5",ORAL_SIGN:"#fbcfe8",RISK_FACTOR_TOBACCO:"#c7d2fe",RISK_FACTOR_ALCOHOL:"#ddd6fe",FAMILY_MEMBER:"#bbf7d0",DURATION:"#a5f3fc"};
+const doc = { data: null, anns: [], pending: null, fileName: "" };
+const $ = (id) => document.getElementById(id);
+$("type").innerHTML = TYPES.map((t) => `<option>${t}</option>`).join("");
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+$("file").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  try {
+    doc.data = JSON.parse(await file.text());
+    if (typeof doc.data.transcript_text !== "string") throw new Error("No transcript_text in file");
+    doc.anns = (doc.data.annotations || []).map((a) => ({...a}));
+    doc.fileName = file.name;
+    $("title").textContent = `Transcript: ${doc.data.source_case_id || file.name}`;
+    $("save").disabled = false;
+    render();
+  } catch (error) { alert("Could not load file: " + error.message); }
+});
+
+function render() {
+  const text = doc.data.transcript_text;
+  const anns = [...doc.anns].sort((a, b) => a.start - b.start);
+  let html = "", cursor = 0;
+  anns.forEach((a) => {
+    if (a.start < cursor) return; // overlapping spans are listed but not double-highlighted
+    html += esc(text.slice(cursor, a.start));
+    html += `<mark data-start="${a.start}" data-end="${a.end}" style="background:${COLORS[a.entity_type] || "#e5e7eb"}" title="${a.entity_type} · ${a.assertion} (click to delete)">${esc(text.slice(a.start, a.end))}<small>${a.entity_type.replace("RISK_FACTOR_", "").slice(0, 8)}</small></mark>`;
+    cursor = a.end;
+  });
+  html += esc(text.slice(cursor));
+  $("text").innerHTML = html;
+  $("text").classList.remove("muted");
+  $("text").querySelectorAll("mark").forEach((m) => m.addEventListener("click", () => {
+    if (confirm(`Delete "${m.firstChild.textContent}"?`)) remove(+m.dataset.start, +m.dataset.end);
+  }));
+  $("count").textContent = doc.anns.length;
+  $("rows").innerHTML = anns.map((a) => `<tr><td>${esc(a.text)}</td><td>${a.entity_type}</td><td>${a.assertion}</td><td><button data-s="${a.start}" data-e="${a.end}" data-t="${a.entity_type}">✕</button></td></tr>`).join("");
+  $("rows").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => remove(+b.dataset.s, +b.dataset.e, b.dataset.t)));
+  renderDisagreements();
+  $("status").textContent = `${doc.anns.length} annotations · unsaved changes are kept until you close the tab`;
+}
+
+function remove(start, end, type) {
+  doc.anns = doc.anns.filter((a) => !(a.start === start && a.end === end && (!type || a.entity_type === type)));
+  render();
+}
+
+// Offset of a DOM point measured in characters of transcript text.
+// The <small> type labels inside highlights are not transcript text and are skipped.
+function offsetOf(node, offset) {
+  const container = $("text");
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  let total = 0, current;
+  while ((current = walker.nextNode())) {
+    const isLabel = current.parentElement && current.parentElement.tagName === "SMALL";
+    if (current === node) return total + (isLabel ? 0 : offset);
+    if (!isLabel) total += current.textContent.length;
+  }
+  return total;
+}
+
+document.addEventListener("mouseup", (event) => {
+  if (!doc.data || $("popup").contains(event.target)) return;
+  const sel = window.getSelection();
+  if (!sel.rangeCount || sel.isCollapsed || !$("text").contains(sel.anchorNode)) return;
+  const range = sel.getRangeAt(0);
+  let start = offsetOf(range.startContainer, range.startOffset);
+  let end = offsetOf(range.endContainer, range.endOffset);
+  const text = doc.data.transcript_text;
+  while (start < end && /[\s.,;:?!]/.test(text[start])) start++;
+  while (end > start && /[\s.,;:?!]/.test(text[end - 1])) end--;
+  if (end <= start) return;
+  doc.pending = { start, end, text: text.slice(start, end) };
+  $("sel-preview").textContent = `"${doc.pending.text}" [${start}, ${end})`;
+  const popup = $("popup");
+  popup.style.left = `${event.pageX + 8}px`;
+  popup.style.top = `${event.pageY + 8}px`;
+  popup.style.display = "block";
+  $("type").focus();
+});
+
+$("add").addEventListener("click", () => {
+  if (!doc.pending) return;
+  const item = { ...doc.pending, entity_type: $("type").value, assertion: $("assertion").value };
+  if (!doc.anns.some((a) => a.start === item.start && a.end === item.end && a.entity_type === item.entity_type)) doc.anns.push(item);
+  closePopup();
+  render();
+});
+$("cancel").addEventListener("click", closePopup);
+function closePopup() { $("popup").style.display = "none"; doc.pending = null; window.getSelection().removeAllRanges(); }
+
+function renderDisagreements() {
+  const list = doc.data.disagreements || [];
+  $("dis-card").style.display = list.length ? "block" : "none";
+  $("dis-count").textContent = list.length;
+  $("dis-list").innerHTML = list.map((d, i) => {
+    const show = (a, who) => a ? `<b>${who}:</b> "${esc(a.text)}" ${a.entity_type} · ${a.assertion}` : `<b>${who}:</b> <i>not annotated</i>`;
+    return `<div class="dis"><div>${show(d.annotator_a, "A")}</div><div>${show(d.annotator_b, "B")}</div><div class="btns">${d.annotator_a ? `<button data-i="${i}" data-pick="a">Accept A</button>` : ""}${d.annotator_b ? `<button data-i="${i}" data-pick="b">Accept B</button>` : ""}<button data-i="${i}" data-pick="none">Reject both</button></div></div>`;
+  }).join("");
+  $("dis-list").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+    const d = doc.data.disagreements[+b.dataset.i];
+    const chosen = b.dataset.pick === "a" ? d.annotator_a : b.dataset.pick === "b" ? d.annotator_b : null;
+    if (chosen) doc.anns.push({ start: chosen.start, end: chosen.end, text: chosen.text, entity_type: chosen.entity_type, assertion: chosen.assertion });
+    doc.data.disagreements.splice(+b.dataset.i, 1);
+    render();
+  }));
+}
+
+$("save").addEventListener("click", () => {
+  const annotator = $("annotator").value.trim().replace(/[^A-Za-z0-9_-]/g, "");
+  if (!annotator) { alert("Enter your annotator ID first (e.g. r1)."); return; }
+  const out = { ...doc.data, annotations: [...doc.anns].sort((a, b) => a.start - b.start) };
+  const adjudicating = Array.isArray(doc.data.disagreements);
+  if (adjudicating) {
+    out.adjudicated_by = annotator;
+    if (!out.disagreements.length) { out.annotation_status = "complete"; out.adjudication_complete = true; }
+  } else {
+    out.annotator_id = annotator;
+    out.annotation_status = "annotated";
+  }
+  const caseId = doc.data.source_case_id || "case";
+  const name = adjudicating ? `${caseId}_gold.json` : `${caseId}_${annotator}.json`;
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
+  const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: name });
+  a.click();
+  URL.revokeObjectURL(a.href);
+  $("status").textContent = `Saved ${name}. Move it into outputs/annotations/.`;
+});
+</script>
+</body>
+</html>

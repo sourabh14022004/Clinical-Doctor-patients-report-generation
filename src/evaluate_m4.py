@@ -385,6 +385,36 @@ class M4Evaluator:
         precision = _safe_div(tp, tp + fp)
         recall = _safe_div(tp, tp + fn)
         f1 = _safe_div(2 * tp, 2 * tp + fp + fn)
+
+        # Lenient matching: same type and overlapping character span (one-to-one).
+        l_tp = l_gold = l_pred = 0
+        per_type: Dict[str, Counter] = defaultdict(Counter)
+        for gold, pred in completed:
+            gold_keys = sorted({(s, e, t) for s, e, t, _ in gold})
+            pred_keys = sorted({(s, e, t) for s, e, t, _ in pred})
+            l_gold += len(gold_keys)
+            l_pred += len(pred_keys)
+            used = set()
+            for gs, ge, gt in gold_keys:
+                for i, (ps, pe, pt) in enumerate(pred_keys):
+                    if i not in used and pt == gt and ps < ge and gs < pe:
+                        used.add(i)
+                        l_tp += 1
+                        break
+            for key in set(gold_keys) & set(pred_keys):
+                per_type[key[2]]["tp"] += 1
+            for key in set(pred_keys) - set(gold_keys):
+                per_type[key[2]]["fp"] += 1
+            for key in set(gold_keys) - set(pred_keys):
+                per_type[key[2]]["fn"] += 1
+        type_table = {}
+        for etype, c in sorted(per_type.items()):
+            type_table[etype] = {
+                "support": c["tp"] + c["fn"], "predicted": c["tp"] + c["fp"],
+                "precision": _safe_div(c["tp"], c["tp"] + c["fp"]),
+                "recall": _safe_div(c["tp"], c["tp"] + c["fn"]),
+                "f1": _safe_div(2 * c["tp"], 2 * c["tp"] + c["fp"] + c["fn"]),
+            }
         return {
             "available": True,
             "completed_annotation_cases": len(completed),
@@ -394,6 +424,12 @@ class M4Evaluator:
                 "true_positive": tp, "false_positive": fp, "false_negative": fn,
                 "precision": precision, "recall": recall, "f1": f1,
             },
+            "entity_lenient_overlap_type": {
+                "true_positive": l_tp, "gold": l_gold, "predicted": l_pred,
+                "precision": _safe_div(l_tp, l_pred), "recall": _safe_div(l_tp, l_gold),
+                "f1": _safe_div(2 * l_tp, l_gold + l_pred),
+            },
+            "per_entity_type_strict": type_table,
             "assertion_on_exact_entity_matches": classification_metrics(assertion_pairs),
             "note": "Exact span-and-type evaluation against human annotations; assertion scores only matched entities.",
         }
@@ -537,6 +573,14 @@ class M4Evaluator:
                 f"- Entity exact-span/type F1: **{self._pct(e['f1'])}**",
                 f"- Assertion evaluation on exact matched entities: **{self._pct(ner['assertion_on_exact_entity_matches']['exact_accuracy'])}**",
             ]
+            lenient = ner.get("entity_lenient_overlap_type")
+            if lenient:
+                lines += [
+                    f"- Lenient (overlapping span, same type) precision / recall / F1: **{self._pct(lenient['precision'])} / {self._pct(lenient['recall'])} / {self._pct(lenient['f1'])}**",
+                    "", "| Entity type | Gold support | Predicted | Precision | Recall | F1 |", "|---|---:|---:|---:|---:|---:|",
+                ]
+                for etype, v in ner.get("per_entity_type_strict", {}).items():
+                    lines.append(f"| {etype} | {v['support']} | {v['predicted']} | {self._pct(v['precision'])} | {self._pct(v['recall'])} | {self._pct(v['f1'])} |")
         else:
             lines.append(f"**Not yet available.** {ner['reason']}")
         lines += ["", "## 5. Baseline versus M3 output audit", ""]

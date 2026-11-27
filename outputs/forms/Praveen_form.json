@@ -44,7 +44,9 @@
       "cancer_type": "Breast cancer",
       "relative": "Mother",
       "assertion": "PRESENT",
-      "evidence": "For my mother Breast"
+      "evidence": "For my mother Breast",
+      "needs_review": false,
+      "review_note": null
     },
     "consumed_tobacco_or_alcohol": {
       "present": null,

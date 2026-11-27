@@ -11,6 +11,11 @@ import os
 import json
 from typing import Dict, List, Any, Optional
 
+try:
+    from src.alignment import HindiEnglishAligner
+except ImportError:
+    from alignment import HindiEnglishAligner
+
 # Medical Ontology Mapping Dictionary (SNOMED-CT / UMLS)
 ONTOLOGY_MAPPINGS = {
     # Symptoms & Conditions
@@ -70,8 +75,11 @@ class ClinicalNEREngine:
     from bilingual consultation transcripts.
     """
 
-    def __init__(self):
+    def __init__(self, clause_question_detection: bool = True, phonetic_alignment: bool = True):
         self.ontology = ONTOLOGY_MAPPINGS
+        # Switches used by src/ablation.py to measure each component's contribution.
+        self.clause_question_detection = clause_question_detection
+        self.phonetic_alignment = phonetic_alignment
 
     def parse_turns(self, transcript_segments: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
@@ -245,6 +253,17 @@ class ClinicalNEREngine:
             r"\bare\s+you\b|\bany\b.{0,35}$|\bwhether\b|क्या|क्या आपको)",
             re.IGNORECASE
         )
+        # Clause-level question cues. The token-window check above misses questions
+        # such as "Did anyone get cancer at home?" or "What type of cancer?", which
+        # previously turned the clinician's question into a PRESENT finding.
+        clause_question_start = re.compile(
+            r"^(?:what|which|who|whom|whose|how|when|where|why|"
+            r"do\s+you|does\s+(?:anyone|anybody|your)|did\s+(?:you|anyone|anybody|your)|"
+            r"have\s+you|has\s+(?:anyone|anybody|your)|had\s+anyone|"
+            r"is\s+there|is\s+anyone|are\s+you|are\s+there|"
+            r"can\s+you|could\s+you|would\s+you|will\s+you|tell\s+me)\b",
+            re.IGNORECASE
+        )
 
         enriched = []
         for ent in entities:
@@ -268,7 +287,13 @@ class ClinicalNEREngine:
             after_prefix = " ".join(clause_after.split()[:5])
             local_context = (local_before + " " + ent.get("span", "") + " " + after_prefix).strip()
 
-            if question_pattern.search(local_before):
+            clause_text = text[left_boundary:right_boundary].strip()
+            clause_is_question = self.clause_question_detection and (
+                (right_boundary < len(text) and text[right_boundary] == "?")
+                or bool(clause_question_start.match(clause_text))
+            )
+
+            if clause_is_question or question_pattern.search(local_before):
                 assertion = "UNKNOWN"
                 reason = "MENTION_IN_QUESTION"
             elif possible_pattern.search(local_context):
@@ -299,19 +324,36 @@ class ClinicalNEREngine:
         """
         relations = []
 
-        # Find Cancer -> Family Member relations
+        # Find Cancer -> Family Member relations.
+        # Only relatives mentioned by the patient (not inside a clinician question such
+        # as "What is your father's name?") can anchor a family-history relation. Each
+        # relative is linked to its nearest cancer mention, and duplicate pairs produced
+        # by repeated ASR segments are collapsed.
         cancers = [e for e in entities if e["entity_type"] == "CANCER_TYPE"]
-        relatives = [e for e in entities if e["entity_type"] == "FAMILY_MEMBER"]
-        for c in cancers:
-            for r in relatives:
-                # If they are close in text (< 120 chars)
-                if abs(c["start"] - r["start"]) < 120:
-                    relations.append({
-                        "relation_type": "FamilyHistory_Of",
-                        "head": {"span": c["span"], "type": c["entity_type"]},
-                        "tail": {"span": r["span"], "type": r["entity_type"]},
-                        "assertion": c.get("assertion", "UNKNOWN")
-                    })
+        relatives = [
+            e for e in entities
+            if e["entity_type"] == "FAMILY_MEMBER" and e.get("assertion_reason") != "MENTION_IN_QUESTION"
+        ]
+        seen_pairs = set()
+        for r in relatives:
+            nearby = [c for c in cancers if abs(c["start"] - r["start"]) < 120]
+            if not nearby:
+                continue
+            c = min(nearby, key=lambda item: abs(item["start"] - r["start"]))
+            pair = (c["span"].lower(), r["span"].lower())
+            if pair in seen_pairs:
+                continue
+            seen_pairs.add(pair)
+            # A cancer mention inside a question carries no assertion of its own; the
+            # patient's statement about the relative is the evidence.
+            source = r if c.get("assertion_reason") == "MENTION_IN_QUESTION" else c
+            relations.append({
+                "relation_type": "FamilyHistory_Of",
+                "head": {"span": c["span"], "type": c["entity_type"]},
+                "tail": {"span": r["span"], "type": r["entity_type"]},
+                "assertion": source.get("assertion", "UNKNOWN"),
+                "evidence": r.get("assertion_context"),
+            })
 
         # Find Risk Factor -> Assertion / Duration relations
         risk_factors = [e for e in entities if "RISK_FACTOR" in e["entity_type"]]
@@ -366,6 +408,9 @@ class ClinicalNEREngine:
         # Relation extraction
         relations = self.extract_relations(entities_with_assertion)
 
+        # Cross-lingual projection: link each English entity back to the Hindi span
+        alignment_summary = HindiEnglishAligner(phonetic=self.phonetic_alignment).align(entities_with_assertion, en_segments, hi_segments)
+
         return {
             "english_text": en_full_text,
             "hindi_text": hi_full_text,
@@ -373,8 +418,35 @@ class ClinicalNEREngine:
             "turns": turns,
             "entities": entities_with_assertion,
             "relations": relations,
+            "alignment_summary": alignment_summary,
             "ontology_grounded_count": sum(1 for e in entities_with_assertion if e.get("ontology_grounding") is not None)
         }
+
+    @staticmethod
+    def reconcile_family_history(ner_result: Dict[str, Any], form: Dict[str, Any]) -> Dict[str, Any]:
+        """Make FamilyHistory_Of relations agree with the form's family-history field.
+
+        The form classifies the patient's whole answer to the family-history question,
+        whereas relation extraction only sees local mentions. When both exist, the
+        form's answer-level assertion is authoritative; a differing relation keeps its
+        original label in ``nlp_assertion`` and is marked as a conflict for review.
+        """
+        family = (form.get("history") or {}).get("family_history_of_cancer") or {}
+        form_assertion = family.get("assertion")
+        if not form_assertion or form_assertion == "UNKNOWN":
+            return ner_result
+        for relation in ner_result.get("relations", []):
+            if relation.get("relation_type") != "FamilyHistory_Of":
+                continue
+            original = relation.get("assertion", "UNKNOWN")
+            relation["assertion"] = form_assertion
+            relation["assertion_source"] = "form_answer"
+            if original != form_assertion:
+                relation["nlp_assertion"] = original
+                relation["conflict"] = True
+            if family.get("needs_review"):
+                relation["review_note"] = family.get("review_note")
+        return ner_result
 
 
 if __name__ == "__main__":

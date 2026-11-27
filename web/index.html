@@ -119,8 +119,8 @@ python src/serve.py</pre>
 
           <section id="tab-entities" class="tab-panel" role="tabpanel" hidden>
             <div class="section-heading"><div><p class="eyebrow">INFORMATION EXTRACTION</p><h2>Medical entities</h2></div><input id="entity-search" class="inline-search" type="search" placeholder="Filter entities…"></div>
-            <div class="table-wrap"><table><thead><tr><th>Extracted span</th><th>Entity type</th><th>Assertion</th><th>Concept mapping</th><th>UMLS CUI</th></tr></thead><tbody id="entity-rows"></tbody></table></div>
-            <p class="footnote">Entity detection currently uses curated rules and a local lexicon; it is not a separately trained contextual NER model.</p>
+            <div class="table-wrap"><table><thead><tr><th>Extracted span</th><th>Hindi span</th><th>Entity type</th><th>Assertion</th><th>Concept mapping</th><th>UMLS CUI</th></tr></thead><tbody id="entity-rows"></tbody></table></div>
+            <p class="footnote">Entity detection currently uses curated rules and a local lexicon; it is not a separately trained contextual NER model. Hindi spans are projected from English using Whisper timestamps plus a phonetic Hindi lexicon; "segment" means only the time-aligned Hindi segment was found.</p>
           </section>
 
           <section id="tab-relations" class="tab-panel" role="tabpanel" hidden>

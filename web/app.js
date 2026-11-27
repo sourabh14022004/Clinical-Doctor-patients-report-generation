@@ -168,7 +168,8 @@ function fieldValue(value) {
   if (typeof value !== "object") return esc(value);
   if (value.assertion) {
     const detail = value.details || value.evidence || value.cancer_type || "";
-    return `${statusPill(value.assertion)}${detail ? `<span class="field-detail">${esc(detail)}</span>` : ""}`;
+    const review = value.needs_review ? `<span class="field-detail"><b>⚠ Review:</b> ${esc(value.review_note || "Conflicting answer")}</span>` : "";
+    return `${statusPill(value.assertion)}${detail ? `<span class="field-detail">${esc(detail)}</span>` : ""}${review}`;
   }
   const parts = Object.entries(value).filter(([key, val]) => val !== null && val !== undefined && val !== "" && !["source_question"].includes(key));
   if (!parts.length) return `<span class="value-muted">Not reported</span>`;
@@ -217,17 +218,23 @@ function renderTranscripts(transcripts) {
 
 function renderEntities(entities) {
   const query = $("entity-search").value.trim().toLowerCase();
-  const filtered = entities.filter((entity) => [entity.span, entity.entity_type, entity.assertion, entity.ontology_grounding?.preferred_term].join(" ").toLowerCase().includes(query));
+  const filtered = entities.filter((entity) => [entity.span, entity.entity_type, entity.assertion, entity.ontology_grounding?.preferred_term, entity.hindi_alignment?.hindi_span].join(" ").toLowerCase().includes(query));
   $("entity-rows").innerHTML = filtered.length ? filtered.map((entity) => {
     const onto = entity.ontology_grounding || {};
     const concept = onto.concept_id ? `${onto.ontology || "Concept"}: ${onto.concept_id}${onto.preferred_term ? ` · ${onto.preferred_term}` : ""}` : "Not mapped";
-    return `<tr><td class="entity-span">${esc(entity.span)}</td><td>${esc(labelOf(entity.entity_type))}</td><td>${statusPill(entity.assertion)}</td><td>${esc(concept)}</td><td class="mono">${esc(onto.cui || "—")}</td></tr>`;
-  }).join("") : `<tr><td colspan="5" class="table-empty">No entities match this filter.</td></tr>`;
+    const align = entity.hindi_alignment || {};
+    const hindi = align.method === "lexical"
+      ? `<span lang="hi">${esc(align.hindi_span)}</span> <small class="value-muted">(${esc(align.confidence)})</small>`
+      : align.method === "segment"
+        ? `<small class="value-muted" title="${esc(align.hindi_segment || "")}">segment only</small>`
+        : `<small class="value-muted">${esc(align.reason === "HINDI_SEGMENT_HALLUCINATED" ? "Hindi ASR hallucinated" : "unaligned")}</small>`;
+    return `<tr><td class="entity-span">${esc(entity.span)}</td><td>${hindi}</td><td>${esc(labelOf(entity.entity_type))}</td><td>${statusPill(entity.assertion)}</td><td>${esc(concept)}</td><td class="mono">${esc(onto.cui || "—")}</td></tr>`;
+  }).join("") : `<tr><td colspan="6" class="table-empty">No entities match this filter.</td></tr>`;
 }
 
 function renderRelations(relations) {
   $("relation-grid").innerHTML = relations.length ? relations.map((relation) => `
-    <article class="relation-card"><div class="relation-head"><span class="tag tag-soft">${esc(labelOf(relation.relation_type))}</span>${statusPill(relation.assertion)}</div><div class="relation-flow"><strong>${esc(relation.head?.span || "Unknown source")}</strong><span>→</span><strong>${esc(relation.tail?.span || relation.tail?.assertion || "Unknown target")}</strong></div><p>Source: ${esc(relation.head?.type || "—")} · Target: ${esc(relation.tail?.type || "Assertion")}</p></article>`).join("") : `<div class="blank-card">No clinical relations were extracted for this consultation.</div>`;
+    <article class="relation-card"><div class="relation-head"><span class="tag tag-soft">${esc(labelOf(relation.relation_type))}</span>${statusPill(relation.assertion)}</div><div class="relation-flow"><strong>${esc(relation.head?.span || "Unknown source")}</strong><span>→</span><strong>${esc(relation.tail?.span || relation.tail?.assertion || "Unknown target")}</strong></div><p>Source: ${esc(relation.head?.type || "—")} · Target: ${esc(relation.tail?.type || "Assertion")}</p>${relation.conflict ? `<p><b>⚠ Reconciled:</b> local NLP said ${esc(relation.nlp_assertion)}; the form's answer-level reading is used.</p>` : ""}${relation.review_note ? `<p><b>⚠ Review:</b> ${esc(relation.review_note)}</p>` : ""}</article>`).join("") : `<div class="blank-card">No clinical relations were extracted for this consultation.</div>`;
 }
 
 function renderEvaluation(metrics) {

@@ -1,0 +1,62 @@
+{
+  "Kajal": {
+    "hindi_hallucination": {
+      "segments": 65,
+      "hallucinated_segments": 0,
+      "hallucinated_audio_share": 0.0
+    },
+    "english_repetition_loops": {
+      "segments": 95,
+      "segments_in_loops": 40,
+      "loop_share": 0.42105263157894735
+    }
+  },
+  "Praveen": {
+    "hindi_hallucination": {
+      "segments": 56,
+      "hallucinated_segments": 0,
+      "hallucinated_audio_share": 0.0
+    },
+    "english_repetition_loops": {
+      "segments": 74,
+      "segments_in_loops": 28,
+      "loop_share": 0.3783783783783784
+    }
+  },
+  "Priyanshi": {
+    "hindi_hallucination": {
+      "segments": 29,
+      "hallucinated_segments": 1,
+      "hallucinated_audio_share": 0.14925373134328357
+    },
+    "english_repetition_loops": {
+      "segments": 70,
+      "segments_in_loops": 0,
+      "loop_share": 0.0
+    }
+  },
+  "Swarnima": {
+    "hindi_hallucination": {
+      "segments": 80,
+      "hallucinated_segments": 0,
+      "hallucinated_audio_share": 0.0
+    },
+    "english_repetition_loops": {
+      "segments": 70,
+      "segments_in_loops": 14,
+      "loop_share": 0.2
+    }
+  },
+  "Uday": {
+    "hindi_hallucination": {
+      "segments": 31,
+      "hallucinated_segments": 27,
+      "hallucinated_audio_share": 0.7127659574468085
+    },
+    "english_repetition_loops": {
+      "segments": 85,
+      "segments_in_loops": 42,
+      "loop_share": 0.49411764705882355
+    }
+  }
+}

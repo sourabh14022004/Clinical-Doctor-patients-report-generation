@@ -134,6 +134,44 @@ class ClinicalAssertionTests(unittest.TestCase):
         self.assertEqual(fever["assertion"], "UNKNOWN")
         self.assertEqual(fever["assertion_reason"], "MENTION_IN_QUESTION")
 
+    def test_question_without_you_is_unknown(self):
+        text = "Did anyone get cancer at home? No. What type of cancer?"
+        entities = self.engine.detect_entities(text)
+        results = self.engine.detect_assertions(text, entities)
+        cancers = [item for item in results if item["entity_type"] == "CANCER_TYPE"]
+        self.assertTrue(cancers)
+        for item in cancers:
+            self.assertEqual(item["assertion"], "UNKNOWN")
+            self.assertEqual(item["assertion_reason"], "MENTION_IN_QUESTION")
+
+    def test_family_relation_ignores_question_relatives_and_dedupes(self):
+        text = ("What is your father's name? Ram. Did anyone get cancer at home? "
+                "It happened in a relative. Did anyone get cancer at home? It happened in a relative.")
+        result_entities = self.engine.detect_assertions(text, self.engine.detect_entities(text))
+        relations = [r for r in self.engine.extract_relations(result_entities)
+                     if r["relation_type"] == "FamilyHistory_Of"]
+        self.assertEqual(len(relations), 1)
+        self.assertEqual(relations[0]["tail"]["span"].lower(), "relative")
+
+    def test_family_history_conflicting_answer_is_reconciled_and_flagged(self):
+        populator = CancerScreeningFormPopulator()
+        transcript = {"transcription": [
+            {"text": "Did anyone get cancer at home?"},
+            {"text": "No. It happened in a relative."},
+        ]}
+        form = populator.populate_form(transcript)
+        family = form["history"]["family_history_of_cancer"]
+        self.assertEqual(family["assertion"], "ABSENT")
+        self.assertTrue(family["needs_review"])
+
+        ner = {"relations": [{"relation_type": "FamilyHistory_Of", "assertion": "PRESENT",
+                              "head": {"span": "cancer"}, "tail": {"span": "relative"}}]}
+        self.engine.reconcile_family_history(ner, form)
+        relation = ner["relations"][0]
+        self.assertEqual(relation["assertion"], family["assertion"])
+        self.assertTrue(relation["conflict"])
+        self.assertEqual(relation["nlp_assertion"], "PRESENT")
+
     def test_uncertainty_cue_is_possible(self):
         text = "Possible fever was reported."
         entities = self.engine.detect_entities(text)

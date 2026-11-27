@@ -35,7 +35,7 @@
 |---|---|---|
 | Past medical history | NO (explicitly denied) | No |
 | Ever screened for cancer | UNKNOWN (not answered / unclear) | Not reported |
-| Family history of cancer | NO (explicitly denied) | No. It happened in a relative. But at the end of the day, I found out about it |
+| Family history of cancer | NO (explicitly denied) ⚠ REVIEW: Answer denies family history but also mentions a relative; confirm with patient. | No. It happened in a relative. But at the end of the day, I found out about it |
 | Prior tobacco or alcohol use | UNKNOWN (not answered / unclear) | Not reported |
 
 ### 4. Behavioral and Lifestyle Risk Factors

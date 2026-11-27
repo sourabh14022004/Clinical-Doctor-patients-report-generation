@@ -44,7 +44,9 @@
       "cancer_type": "Breast cancer",
       "relative": "Family member (unspecified)",
       "assertion": "PRESENT",
-      "evidence": "Yes, I had to get it. Breast cancer"
+      "evidence": "Yes, I had to get it. Breast cancer",
+      "needs_review": false,
+      "review_note": null
     },
     "consumed_tobacco_or_alcohol": {
       "present": false,
