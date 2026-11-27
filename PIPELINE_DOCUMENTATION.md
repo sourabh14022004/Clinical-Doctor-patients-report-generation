@@ -22,7 +22,7 @@ Audio input
   -> Human review
 ```
 
-Hindi transcript is retained for bilingual display. In the current pipeline, clinical entity detection and form population primarily operate on the English translation; Hindi entity recognition and bilingual span alignment are incomplete.
+Hindi transcript is retained for bilingual display. In the current pipeline, clinical entity detection and form population operate on the English translation. `src/alignment.py` then projects each English entity back to a Hindi span (Whisper timestamps + phonetic matching); about 23% of entities reach word level. Native Hindi NER is not implemented.
 
 ## 3. Module responsibilities
 
@@ -123,7 +123,7 @@ Local smoke testing confirms code execution and output generation; it is not an 
 
 ## 7. M4 evaluation status and remaining limitations
 
-- The English translation may alter or omit clinical meaning; Hindi-to-English span alignment is not implemented.
+- The English translation may alter or omit clinical meaning; Hindi span projection is partial (about 23% of entities, 28% of clinical entities, reach word level).
 - ASR question segmentation can be wrong, especially for code-mixed or noisy speech.
 - Pattern-based NER has limited coverage and can miss synonyms or produce false positives.
 - Assertion scope is heuristic and should be clinically adjudicated.

@@ -100,6 +100,13 @@ def process_patient(patient_id: str, ner_engine: ClinicalNEREngine, form_populat
             hi_data = json.load(f)
 
     form = form_populator.populate_form(en_data, hi_data, ner_result, patient_id=patient_id)
+
+    # Align family-history relations with the form's answer-level decision so the
+    # dashboard never shows two different answers for the same question.
+    ner_engine.reconcile_family_history(ner_result, form)
+    with open(f"outputs/ner/{patient_id}_ner.json", "w", encoding="utf-8") as f:
+        json.dump(ner_result, f, indent=2)
+
     os.makedirs("outputs/forms", exist_ok=True)
     with open(f"outputs/forms/{patient_id}_form.json", "w", encoding="utf-8") as f:
         json.dump(form, f, indent=2)

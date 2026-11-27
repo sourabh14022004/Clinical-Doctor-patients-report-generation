@@ -12,7 +12,9 @@ An academic **prototype** for processing Hindi / code-mixed clinical consultatio
 4. **Assertion detection:** Local context rules classify entity mentions as `PRESENT`, `ABSENT`, `POSSIBLE` or `UNKNOWN`. Mentions inside clinician questions are not automatically treated as positive findings.
 5. **Concept mapping:** Selected English terms are mapped to locally defined SNOMED-CT / UMLS identifiers. The mappings are a prototype dictionary and must be clinically and terminologically validated before deployment.
 6. **Form generation:** `src/form_populator.py` maps aligned answers into a structured JSON form and Markdown summary. Missing answers stay `null` / `UNKNOWN`; the software does not infer sex, measurements or other demographics from case IDs.
-7. **Dashboard:** `web/` renders local transcripts, extracted entities, relations and generated forms from `web/data.json`.
+7. **Hindi↔English span alignment:** `src/alignment.py` projects every English entity back to the Hindi transcript (cross-lingual entity projection). It anchors on Whisper timestamps to find the matching Hindi segment, then finds the Hindi word span with a phonetic consonant-skeleton matcher that tolerates noisy ASR spellings (कैंसर / कानसर / खंसर). It also detects and skips Whisper hallucination loops.
+8. **Dashboard:** `web/` renders local transcripts, extracted entities (with their Hindi spans), relations and generated forms. `web/annotate.html` is a click-to-annotate tool for building NER gold data.
+9. **Evaluation suite:** four-state form evaluation, NER P/R/F1 (strict and lenient) with inter-annotator agreement, an ablation study, ASR/translation quality, and error-propagation analysis. Run everything with `python src/run_all_evaluations.py`.
 
 ## Architecture
 
@@ -33,6 +35,9 @@ Hindi transcript                 English transcript
                                        v
                      Rule/lexicon-based clinical extraction
                                        |
+                                       v
+             Hindi span projection (timestamps + phonetic lexicon)
+                                       |
                        +---------------+---------------+
                        |               |               |
                        v               v               v
@@ -50,26 +55,33 @@ Hindi transcript                 English transcript
                           Human review / correction
 ```
 
-**Important architecture clarification:** Hindi transcription is retained for bilingual display. The current clinical NER and form-population workflow primarily operates on the English translation. Hindi clinical entity recognition and bilingual entity-span alignment are not yet complete.
+**Important architecture clarification:** NER and form population run on the English translation, and each English entity is then projected back to a Hindi span. About 23% of entities (28% of clinical entities) are linked to a specific Hindi word span. The rest are linked to the time-aligned Hindi segment only, or are unaligned where the Hindi ASR hallucinated. Native Hindi NER (running NER on the Hindi text itself) is not implemented.
 
 ## Repository structure
 
 ```text
 src/
   medical_ner.py          # Rule-based entity detection, assertions, relations, concept lookup
+  alignment.py            # Hindi<->English entity span projection + hallucination detection
   form_populator.py       # Q/A alignment and structured form generation
   evaluate.py             # Historical binary comparator (legacy only)
   evaluate_m4.py          # Four-state field + human-annotated NER evaluator
   prepare_annotations.py  # Creates local blank NER gold-annotation templates
+  annotation_agreement.py # Inter-annotator agreement (pairwise F1, Cohen's kappa) + adjudication
+  ablation.py             # Ablation study: contribution of each component vs trivial baselines
+  asr_eval.py             # Whisper hallucination rate, Hindi WER/CER, English chrF
+  error_analysis.py       # Error propagation: which stage lost each missing answer
+  compare_ner_systems.py  # Rule system vs neural baseline (GLiNER)
+  run_all_evaluations.py  # Runs every evaluation and prints a summary
   pipeline.py             # End-to-end command-line orchestration
+  serve.py                # Local-only dashboard server
   export_web_data.py      # Local dashboard-data export
-tests/
-  test_m3_pipeline.py     # Extraction and assertion regression tests
-  test_evaluate_m4.py     # Four-state metric and normalization tests
+baselines/
+  gliner_baseline.py      # Zero-shot neural NER baseline (run on Kaggle/Colab)
+tests/                    # 62 automated tests (standard library unittest)
 web/
-  index.html
-  app.js
-  style.css
+  index.html, app.js, style.css   # Dashboard
+  annotate.html                   # NER annotation tool
 ```
 
 Clinical audio, scanned forms, raw transcripts, generated patient records and the aggregated dashboard data are intentionally excluded from version control. Obtain the necessary permissions before processing or sharing any real patient data. If any such files were already committed, `.gitignore` will not remove them from Git history; untrack them with `git rm -r --cached audio Docs outputs` after checking the paths and repository status.
@@ -78,7 +90,7 @@ Clinical audio, scanned forms, raw transcripts, generated patient records and th
 
 ### 1. Python
 
-Use Python 3.10 or later. The current core extraction code uses the Python standard library.
+Use Python 3.9 or later. The core pipeline and all evaluations use only the Python standard library: there is nothing to `pip install`. Only the optional GLiNER baseline needs PyTorch (run it on Kaggle/Colab).
 
 ### 2. Whisper CLI and model
 
@@ -117,7 +129,7 @@ python src/pipeline.py <case_id>       # one case
 python -m unittest discover -s tests -v
 ```
 
-The current M3/M4 suite contains 23 automated tests.
+The suite contains 62 automated tests.
 
 ### 6. Run M4 evaluation separately
 
@@ -170,6 +182,14 @@ A descriptive baseline audit across all five generated forms found 68 ABSENT / 2
 
 Do not present the legacy `100%` result as “100% clinical accuracy.” The current M4 measurements are preliminary, class-imbalanced, based on only four matched case pairs, and require independent clinical review. Patient data and test splits must be governed by consent, de-identification and institutional approval.
 
+### Additional analyses (`python src/run_all_evaluations.py`)
+
+- **Trivial baselines (ablation):** "always ABSENT" reaches 96.4% exact agreement with 0% PRESENT recall, because 54 of the 56 reference labels are ABSENT. The reference set cannot separate careful extraction from guessing "no". Coverage, selective accuracy and PRESENT recall are therefore reported separately. See `outputs/eval/ablation/`.
+- **Question-mention errors:** clause-level question detection reduces clinical entities wrongly labelled PRESENT inside a clinician question from 16 to 0 (out of 113).
+- **Alignment:** phonetic matching links 23.3% of entities to a Hindi word span, against 14.8% for exact string matching.
+- **ASR quality:** Whisper hallucinated 71% of one recording's Hindi audio, and 0–49% of English translation segments sit inside repetition loops. See `outputs/eval/asr/`.
+- **Error propagation:** of the 34 answers the system missed, 20 were absent from both transcripts (ASR), 5 were present in Hindi but lost in the English translation, and 9 were present in English but not matched by the question rules. See `outputs/eval/error_analysis/`.
+
 ## M3 changes in this version
 
 - Four-state assertion handling: `PRESENT`, `ABSENT`, `POSSIBLE`, `UNKNOWN`.
@@ -185,7 +205,7 @@ Do not present the legacy `100%` result as “100% clinical accuracy.” The cur
 
 - Q/A segmentation and assertion detection are heuristic and can fail on code-mixed, noisy or poorly translated speech.
 - Clinical NER is rule/lexicon based; it is not a trained contextual model.
-- Hindi entity extraction and Hindi-to-English span alignment are incomplete.
+- Native Hindi NER is not implemented; Hindi spans are obtained by projection from English, and only about a quarter of entities reach word-level alignment.
 - The local concept dictionary is limited and has not been independently clinically validated.
 - There is no speaker diarization or robust dialogue-turn attribution.
 - The dashboard is a local prototype, not a secure clinical deployment.

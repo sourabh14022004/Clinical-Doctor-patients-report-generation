@@ -1,0 +1,91 @@
+{
+  "form_filling": [
+    {
+      "configuration": "Trivial baseline: always ABSENT",
+      "description": "No NLP. Predicts 'no' for every field.",
+      "n": 56,
+      "exact_accuracy": 0.9642857142857143,
+      "coverage": 1.0,
+      "selective_accuracy": 0.9642857142857143,
+      "present_recall": 0.0,
+      "absent_recall": 1.0,
+      "macro_f1": 0.4909090909090909
+    },
+    {
+      "configuration": "Trivial baseline: always UNKNOWN",
+      "description": "No NLP. Abstains on every field.",
+      "n": 56,
+      "exact_accuracy": 0.0,
+      "coverage": 0.0,
+      "selective_accuracy": null,
+      "present_recall": 0.0,
+      "absent_recall": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "configuration": "Full system",
+      "description": "All components on.",
+      "n": 56,
+      "exact_accuracy": 0.39285714285714285,
+      "coverage": 0.39285714285714285,
+      "selective_accuracy": 1.0,
+      "present_recall": 1.0,
+      "absent_recall": 0.37037037037037035,
+      "macro_f1": 0.7702702702702703
+    },
+    {
+      "configuration": "- question-start cues",
+      "description": "Questions detected by '?' only; ASR often drops '?'.",
+      "n": 56,
+      "exact_accuracy": 0.39285714285714285,
+      "coverage": 0.39285714285714285,
+      "selective_accuracy": 1.0,
+      "present_recall": 1.0,
+      "absent_recall": 0.37037037037037035,
+      "macro_f1": 0.7702702702702703
+    },
+    {
+      "configuration": "+ pre-M3 default (UNKNOWN -> ABSENT)",
+      "description": "Unanswered fields silently become 'no' (old behaviour).",
+      "n": 56,
+      "exact_accuracy": 1.0,
+      "coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "present_recall": 1.0,
+      "absent_recall": 1.0,
+      "macro_f1": 1.0
+    }
+  ],
+  "question_mentions": [
+    {
+      "configuration": "Full system",
+      "clinical_entities": 113,
+      "present_inside_question": 0
+    },
+    {
+      "configuration": "- clause-level question detection",
+      "clinical_entities": 113,
+      "present_inside_question": 16
+    }
+  ],
+  "alignment": [
+    {
+      "configuration": "Phonetic skeleton matching (full)",
+      "entities": 176,
+      "lexical": 41,
+      "clinical": 113,
+      "clinical_lexical": 32,
+      "lexical_rate": 0.23295454545454544,
+      "clinical_lexical_rate": 0.2831858407079646
+    },
+    {
+      "configuration": "Exact string matching only",
+      "entities": 176,
+      "lexical": 26,
+      "clinical": 113,
+      "clinical_lexical": 22,
+      "lexical_rate": 0.14772727272727273,
+      "clinical_lexical_rate": 0.19469026548672566
+    }
+  ]
+}

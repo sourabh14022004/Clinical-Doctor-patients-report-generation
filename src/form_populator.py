@@ -32,13 +32,17 @@ class CancerScreeningFormPopulator:
         "bleeding", "opening your mouth", "white or red", "chewing", "swallowing",
     )
 
+    def __init__(self, question_start_cues: bool = True):
+        # False = detect questions by "?" only (ablation baseline).
+        self.question_start_cues = question_start_cues
+
     def _is_question(self, text: str) -> bool:
         value = text.strip()
         if not value:
             return False
         if value.endswith("?"):
             return True
-        return bool(self.QUESTION_START.search(value))
+        return self.question_start_cues and bool(self.QUESTION_START.search(value))
 
     def extract_qa_turns(self, segments: List[Dict[str, Any]]) -> List[Tuple[str, str]]:
         """Pair each question segment with following answer segments until next question.
@@ -450,12 +454,20 @@ class CancerScreeningFormPopulator:
     def _parse_fam_cancer(self, answer: str) -> Dict[str, Any]:
         status = self._binary_assertion(answer)
         value = answer.lower()
+        mentions_relative = any(term in value for term in (
+            "mother", "mummy", "mom", "father", "papa", "dad", "sister", "brother", "relative"
+        ))
         # In response to a direct family-cancer question, a relative-only answer
         # (e.g. "mother") is a positive answer even when ASR omitted "yes".
-        if status == "UNKNOWN" and any(term in value for term in (
-            "mother", "mummy", "mom", "father", "papa", "dad", "sister", "brother", "relative"
-        )):
+        if status == "UNKNOWN" and mentions_relative:
             status = "PRESENT"
+        # "No. It happened in a relative." both denies and reports a relative. Keep the
+        # explicit denial (it answers the question asked) but flag it for clinician review.
+        needs_review = status == "ABSENT" and mentions_relative
+        review_note = (
+            "Answer denies family history but also mentions a relative; confirm with patient."
+            if needs_review else None
+        )
         cancer_type = None
         relative = None
         if status == "PRESENT":
@@ -481,6 +493,8 @@ class CancerScreeningFormPopulator:
             "relative": relative,
             "assertion": status,
             "evidence": answer or None,
+            "needs_review": needs_review,
+            "review_note": review_note,
         }
 
     def _parse_alcohol(self, answer: str) -> Optional[str]:
@@ -582,7 +596,10 @@ class CancerScreeningFormPopulator:
         ]:
             item = hist.get(key, {})
             evidence = item.get("evidence") or item.get("details")
-            md.append(f"| {label} | {self._status_label(item.get('assertion'))} | {self._display(evidence)} |")
+            status = self._status_label(item.get("assertion"))
+            if item.get("needs_review"):
+                status += f" ⚠ REVIEW: {item.get('review_note')}"
+            md.append(f"| {label} | {status} | {self._display(evidence)} |")
 
         md += ["", "### 4. Behavioral and Lifestyle Risk Factors", "| Field | Extracted information |", "|---|---|"]
         tobacco = risk.get("current_tobacco_use", {})

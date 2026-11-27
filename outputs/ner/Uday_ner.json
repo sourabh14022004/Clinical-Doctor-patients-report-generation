@@ -1588,7 +1588,20 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "32 years old"
+      "assertion_context": "32 years old",
+      "hindi_alignment": {
+        "en_time_ms": [
+          4000,
+          6000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u0905\u0926\u093e\u092f \u0938\u0947\u0902, \u0905\u092a\u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u092c\u0926\u0924\u093f\u0938 \u0938\u093e\u0930, \u0915\u093f\u0924 \u092a\u0921\u093c\u0947 \u0939\u0948, \u092e\u093e\u0938\u094d\u091f\u0930\u094d\u0938, \u0915\u094d\u092f\u093e \u0917\u093e\u092e \u0915\u0930\u0924\u0947, \u091c\u093e\u0901 \u0915\u0930\u0924\u0947, \u0936\u093e\u0926\u0940 \u0939\u094b\u0917\u0940 \u0939\u0948, \u0915\u093e\u0930 \u0905\u0924\u0947 \u0939\u0948, \u092c\u0926\u0924 \u0915\u094d\u092f\u093e, \u092a\u0924\u093e \u092f\u093e\u092e \u092a\u0930 \u092e\u0940\u0964 \u0924\u0941, \u0938\u0947\u091f \u0915\u0930 \u0926\u0942\u091f\u0941, \u0905\u092a\u0915\u0947 \u092a\u093f\u0924\u093e\u091c\u0940 \u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u092e\u093f\u0937\u094d\u091f\u0930 \u0932\u0917 \u092a\u0930 \u0916\u093e\u0938,",
+        "hi_time_ms": [
+          0,
+          29000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "married",
@@ -1598,7 +1611,23 @@
       "ontology_grounding": null,
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Are you married"
+      "assertion_context": "Are you married",
+      "hindi_alignment": {
+        "en_time_ms": [
+          16000,
+          18000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u0905\u0926\u093e\u092f \u0938\u0947\u0902, \u0905\u092a\u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u092c\u0926\u0924\u093f\u0938 \u0938\u093e\u0930, \u0915\u093f\u0924 \u092a\u0921\u093c\u0947 \u0939\u0948, \u092e\u093e\u0938\u094d\u091f\u0930\u094d\u0938, \u0915\u094d\u092f\u093e \u0917\u093e\u092e \u0915\u0930\u0924\u0947, \u091c\u093e\u0901 \u0915\u0930\u0924\u0947, \u0936\u093e\u0926\u0940 \u0939\u094b\u0917\u0940 \u0939\u0948, \u0915\u093e\u0930 \u0905\u0924\u0947 \u0939\u0948, \u092c\u0926\u0924 \u0915\u094d\u092f\u093e, \u092a\u0924\u093e \u092f\u093e\u092e \u092a\u0930 \u092e\u0940\u0964 \u0924\u0941, \u0938\u0947\u091f \u0915\u0930 \u0926\u0942\u091f\u0941, \u0905\u092a\u0915\u0947 \u092a\u093f\u0924\u093e\u091c\u0940 \u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u092e\u093f\u0937\u094d\u091f\u0930 \u0932\u0917 \u092a\u0930 \u0916\u093e\u0938,",
+        "hi_time_ms": [
+          0,
+          29000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0936\u093e\u0926\u0940",
+        "hindi_start": 95,
+        "hindi_end": 99,
+        "confidence": 1.0
+      }
     },
     {
       "span": "diabetes",
@@ -1613,7 +1642,20 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes"
+      "assertion_context": "Do you ever get diabetes",
+      "hindi_alignment": {
+        "en_time_ms": [
+          54000,
+          56000
+        ],
+        "hindi_segment": "\u0935\u091c\u0928 \u0915\u094d\u092f\u093e \u0939\u094b\u0917\u093e \u0915\u094b, \u0938\u0947\u091f\u0928\u094d\u0924\u0940 \u092f\u0947\u091f,",
+        "hi_time_ms": [
+          48000,
+          54000
+        ],
+        "method": "segment",
+        "reason": "NO_WORD_LEVEL_MATCH"
+      }
     },
     {
       "span": "diabetes",
@@ -1628,7 +1670,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes"
+      "assertion_context": "Do you ever get diabetes",
+      "hindi_alignment": {
+        "en_time_ms": [
+          82000,
+          84000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1643,7 +1694,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes"
+      "assertion_context": "Do you ever get diabetes",
+      "hindi_alignment": {
+        "en_time_ms": [
+          90000,
+          92000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1658,7 +1718,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          98000,
+          100000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1673,7 +1742,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          102000,
+          104000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1688,7 +1766,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          106000,
+          108000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1703,7 +1790,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          110000,
+          112000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1718,7 +1814,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          114000,
+          116000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1733,7 +1838,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          118000,
+          120000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1748,7 +1862,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          122000,
+          124000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1763,7 +1886,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          126000,
+          128000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1778,7 +1910,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          130000,
+          132000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1793,7 +1934,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          134000,
+          136000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1808,7 +1958,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          138000,
+          140000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1823,7 +1982,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          142000,
+          144000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1838,7 +2006,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          146000,
+          148000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1853,7 +2030,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          150000,
+          152000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1868,7 +2054,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          154000,
+          156000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1883,7 +2078,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          158000,
+          160000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1898,7 +2102,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          166000,
+          168000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1913,7 +2126,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          170000,
+          172000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1928,7 +2150,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          174000,
+          176000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1943,7 +2174,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          178000,
+          180000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "diabetes",
@@ -1958,7 +2198,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever get diabetes at home"
+      "assertion_context": "Do you ever get diabetes at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          182000,
+          184000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "cancer",
@@ -1973,7 +2222,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever done a test of cancer"
+      "assertion_context": "Have you ever done a test of cancer",
+      "hindi_alignment": {
+        "en_time_ms": [
+          58000,
+          60000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "cancer",
@@ -1986,9 +2244,18 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "Did anyone get cancer at home"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Did anyone get cancer at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          62000,
+          64000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "cancer",
@@ -2001,9 +2268,18 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "Did anyone get cancer at home"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Did anyone get cancer at home",
+      "hindi_alignment": {
+        "en_time_ms": [
+          70000,
+          72000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "cancer",
@@ -2016,9 +2292,18 @@
         "preferred_term": "Malignant neoplastic disease",
         "cui": "C0006826"
       },
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "Did anyone get cancer at the end of the"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "Did anyone get cancer at the end of the",
+      "hindi_alignment": {
+        "en_time_ms": [
+          78000,
+          80000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "alcohol",
@@ -2033,7 +2318,16 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Do you ever drink alcohol"
+      "assertion_context": "Do you ever drink alcohol",
+      "hindi_alignment": {
+        "en_time_ms": [
+          86000,
+          88000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "father",
@@ -2041,9 +2335,25 @@
       "end": 219,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "What is your father 's name"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "What is your father 's name",
+      "hindi_alignment": {
+        "en_time_ms": [
+          24000,
+          26000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u0905\u0926\u093e\u092f \u0938\u0947\u0902, \u0905\u092a\u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u092c\u0926\u0924\u093f\u0938 \u0938\u093e\u0930, \u0915\u093f\u0924 \u092a\u0921\u093c\u0947 \u0939\u0948, \u092e\u093e\u0938\u094d\u091f\u0930\u094d\u0938, \u0915\u094d\u092f\u093e \u0917\u093e\u092e \u0915\u0930\u0924\u0947, \u091c\u093e\u0901 \u0915\u0930\u0924\u0947, \u0936\u093e\u0926\u0940 \u0939\u094b\u0917\u0940 \u0939\u0948, \u0915\u093e\u0930 \u0905\u0924\u0947 \u0939\u0948, \u092c\u0926\u0924 \u0915\u094d\u092f\u093e, \u092a\u0924\u093e \u092f\u093e\u092e \u092a\u0930 \u092e\u0940\u0964 \u0924\u0941, \u0938\u0947\u091f \u0915\u0930 \u0926\u0942\u091f\u0941, \u0905\u092a\u0915\u0947 \u092a\u093f\u0924\u093e\u091c\u0940 \u0915\u093e \u0928\u093e\u092e \u0915\u0947, \u092e\u093f\u0937\u094d\u091f\u0930 \u0932\u0917 \u092a\u0930 \u0916\u093e\u0938,",
+        "hi_time_ms": [
+          0,
+          29000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u092a\u093f\u0924\u093e\u091c\u0940",
+        "hindi_start": 168,
+        "hindi_end": 174,
+        "confidence": 1.0
+      }
     },
     {
       "span": "relative",
@@ -2053,7 +2363,16 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "It happened in a relative"
+      "assertion_context": "It happened in a relative",
+      "hindi_alignment": {
+        "en_time_ms": [
+          66000,
+          68000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     },
     {
       "span": "relative",
@@ -2063,7 +2382,16 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "It happened in a relative"
+      "assertion_context": "It happened in a relative",
+      "hindi_alignment": {
+        "en_time_ms": [
+          74000,
+          76000
+        ],
+        "method": "unaligned",
+        "reason": "HINDI_SEGMENT_HALLUCINATED",
+        "hindi_segment": "\u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930, \u0905\u092a\u0915\u091a\u0947 \u0938\u093e\u0930,"
+      }
     }
   ],
   "relations": [
@@ -2077,55 +2405,12 @@
         "span": "relative",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "UNKNOWN"
-    },
-    {
-      "relation_type": "FamilyHistory_Of",
-      "head": {
-        "span": "cancer",
-        "type": "CANCER_TYPE"
-      },
-      "tail": {
-        "span": "relative",
-        "type": "FAMILY_MEMBER"
-      },
-      "assertion": "PRESENT"
-    },
-    {
-      "relation_type": "FamilyHistory_Of",
-      "head": {
-        "span": "cancer",
-        "type": "CANCER_TYPE"
-      },
-      "tail": {
-        "span": "relative",
-        "type": "FAMILY_MEMBER"
-      },
-      "assertion": "PRESENT"
-    },
-    {
-      "relation_type": "FamilyHistory_Of",
-      "head": {
-        "span": "cancer",
-        "type": "CANCER_TYPE"
-      },
-      "tail": {
-        "span": "relative",
-        "type": "FAMILY_MEMBER"
-      },
-      "assertion": "PRESENT"
-    },
-    {
-      "relation_type": "FamilyHistory_Of",
-      "head": {
-        "span": "cancer",
-        "type": "CANCER_TYPE"
-      },
-      "tail": {
-        "span": "relative",
-        "type": "FAMILY_MEMBER"
-      },
-      "assertion": "PRESENT"
+      "assertion": "ABSENT",
+      "evidence": "It happened in a relative",
+      "assertion_source": "form_answer",
+      "nlp_assertion": "PRESENT",
+      "conflict": true,
+      "review_note": "Answer denies family history but also mentions a relative; confirm with patient."
     },
     {
       "relation_type": "Status_Of",
@@ -2138,5 +2423,14 @@
       }
     }
   ],
+  "alignment_summary": {
+    "entities": 34,
+    "lexical": 2,
+    "segment": 2,
+    "unaligned": 30,
+    "lexical_rate": 0.059,
+    "hindi_segments": 31,
+    "hallucinated_hindi_segments": 27
+  },
   "ontology_grounded_count": 29
 }

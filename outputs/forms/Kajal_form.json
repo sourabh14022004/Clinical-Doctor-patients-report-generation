@@ -44,7 +44,9 @@
       "cancer_type": null,
       "relative": null,
       "assertion": "UNKNOWN",
-      "evidence": null
+      "evidence": null,
+      "needs_review": false,
+      "review_note": null
     },
     "consumed_tobacco_or_alcohol": {
       "present": null,

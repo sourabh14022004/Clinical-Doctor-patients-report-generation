@@ -1451,7 +1451,20 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "Namaste, my name is Dr"
+      "assertion_context": "Namaste, my name is Dr",
+      "hindi_alignment": {
+        "en_time_ms": [
+          0,
+          5000
+        ],
+        "hindi_segment": "\u0928\u092e\u0938\u094d\u0924\u0947 \u092e\u0947\u0930\u0947 \u0928\u093e\u092e \u0926\u094b\u0915\u094d\u0924\u0930 \u0938\u0941\u0930\u094d\u0921\u093f\u0928\u094d\u092e\u093e\u092f, \u092e\u0948\u0902 \u0906\u092a \u0938\u0947 \u0915\u0941\u091b \u092a\u0941\u0937\u0928 \u092a\u0941\u0937\u0928\u093e \u091a\u093e\u0942\u0902\u0917\u0940, \u0905\u092a\u0915\u093e \u0928\u093e\u092e?",
+        "hi_time_ms": [
+          0,
+          6000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "Dr. Praveen Kumar Sharma",
@@ -1461,7 +1474,20 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "Dr. Praveen Kumar Sharma"
+      "assertion_context": "Dr. Praveen Kumar Sharma",
+      "hindi_alignment": {
+        "en_time_ms": [
+          6000,
+          8000
+        ],
+        "hindi_segment": "\u0924\u094b\u0915\u094d\u0924\u0930 \u092a\u094d\u0930\u0935\u093f\u0916\u0941 \u092e\u093e\u0936\u0930\u094d\u092e\u093e.",
+        "hi_time_ms": [
+          6000,
+          8000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "3...1...95",
@@ -1471,7 +1497,20 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "3...1...95"
+      "assertion_context": "3...1...95",
+      "hindi_alignment": {
+        "en_time_ms": [
+          14000,
+          17000
+        ],
+        "hindi_segment": "\u0924\u0940\u0928 \u090f\u0915 \u0928\u093e\u0907\u0902\u091f\u093f\u092b\u093e\u0908\u0917.",
+        "hi_time_ms": [
+          14000,
+          17000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "PGJR",
@@ -1481,7 +1520,20 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "My MBA is completed in PGJR and Community Medicine"
+      "assertion_context": "My MBA is completed in PGJR and Community Medicine",
+      "hindi_alignment": {
+        "en_time_ms": [
+          21000,
+          25000
+        ],
+        "hindi_segment": "\u0924\u0930\u0947 \u0906\u092e\u092d\u0947 \u092d\u0947\u0938 \u0915\u092e\u094d\u092a\u094d\u0932\u093f\u091f \u0939\u0948 \u0905\u092d\u0940 \u092a\u0940\u091c\u0940 \u091c\u0947\u092f\u093e \u0914\u0930 \u0915\u092e\u094d\u092e\u093f\u0932\u093f\u091f\u0940 \u092e\u0948\u091f\u0947\u0938\u0947\u0928\u0964",
+        "hi_time_ms": [
+          21000,
+          25000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "married",
@@ -1491,7 +1543,23 @@
       "ontology_grounding": null,
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Are you married"
+      "assertion_context": "Are you married",
+      "hindi_alignment": {
+        "en_time_ms": [
+          32000,
+          33000
+        ],
+        "hindi_segment": "\u0905\u092a \u0936\u093e\u0926\u0940 \u0936\u0941\u0926 \u0939\u0948?",
+        "hi_time_ms": [
+          32000,
+          33000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0936\u093e\u0926\u0940",
+        "hindi_start": 306,
+        "hindi_end": 310,
+        "confidence": 1.0
+      }
     },
     {
       "span": "1 lakh",
@@ -1501,7 +1569,20 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "1 lakh"
+      "assertion_context": "1 lakh",
+      "hindi_alignment": {
+        "en_time_ms": [
+          63000,
+          64000
+        ],
+        "hindi_segment": "\u092a\u093f\u0938, \u090f\u0915 \u0932\u093e\u0917\u094d",
+        "hi_time_ms": [
+          62000,
+          64000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "diabetes",
@@ -1516,7 +1597,20 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever been sick like diabetes , BP, sugar"
+      "assertion_context": "Have you ever been sick like diabetes , BP, sugar",
+      "hindi_alignment": {
+        "en_time_ms": [
+          81000,
+          86000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u094b \u0915\u092d\u0940 \u092a\u0939\u0932\u0947 \u0915\u0941\u0908 \u0932\u0902\u092d\u0940 \u0935\u093f\u092e\u093e\u0930\u0940 \u0930\u0939\u0940 \u0939\u094b, \u092f\u0947 \u0938\u0947 \u0926\u093e\u090f\u092c\u093f\u091f\u0940, \u092c\u0940\u092a\u0940, \u0936\u0941\u0930\u094d\u0921\u0930, \u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u0915\u093f\u0938\u094d\u091f\u0940 \u092d\u0940 \u0916\u0923\u0938\u0930 \u0915\u0947 \u091c\u093e\u091c \u0915\u0930 \u0906\u0908\u090f, \u0938\u0930\u0935\u093e\u090f\u0915\u0932, \u092c\u094d\u0930\u0948\u0938\u094d\u091f, \u0914\u0930\u0932",
+        "hi_time_ms": [
+          81000,
+          95000
+        ],
+        "method": "segment",
+        "reason": "NO_WORD_LEVEL_MATCH"
+      }
     },
     {
       "span": "sugar",
@@ -1524,9 +1618,22 @@
       "end": 664,
       "entity_type": "DIAGNOSIS",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "you ever been sick like diabetes, BP, sugar"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "you ever been sick like diabetes, BP, sugar",
+      "hindi_alignment": {
+        "en_time_ms": [
+          81000,
+          86000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u094b \u0915\u092d\u0940 \u092a\u0939\u0932\u0947 \u0915\u0941\u0908 \u0932\u0902\u092d\u0940 \u0935\u093f\u092e\u093e\u0930\u0940 \u0930\u0939\u0940 \u0939\u094b, \u092f\u0947 \u0938\u0947 \u0926\u093e\u090f\u092c\u093f\u091f\u0940, \u092c\u0940\u092a\u0940, \u0936\u0941\u0930\u094d\u0921\u0930, \u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u0915\u093f\u0938\u094d\u091f\u0940 \u092d\u0940 \u0916\u0923\u0938\u0930 \u0915\u0947 \u091c\u093e\u091c \u0915\u0930 \u0906\u0908\u090f, \u0938\u0930\u0935\u093e\u090f\u0915\u0932, \u092c\u094d\u0930\u0948\u0938\u094d\u091f, \u0914\u0930\u0932",
+        "hi_time_ms": [
+          81000,
+          95000
+        ],
+        "method": "segment",
+        "reason": "NO_WORD_LEVEL_MATCH"
+      }
     },
     {
       "span": "BP",
@@ -1536,7 +1643,23 @@
       "ontology_grounding": null,
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever been sick like diabetes, BP , sugar"
+      "assertion_context": "Have you ever been sick like diabetes, BP , sugar",
+      "hindi_alignment": {
+        "en_time_ms": [
+          81000,
+          86000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u094b \u0915\u092d\u0940 \u092a\u0939\u0932\u0947 \u0915\u0941\u0908 \u0932\u0902\u092d\u0940 \u0935\u093f\u092e\u093e\u0930\u0940 \u0930\u0939\u0940 \u0939\u094b, \u092f\u0947 \u0938\u0947 \u0926\u093e\u090f\u092c\u093f\u091f\u0940, \u092c\u0940\u092a\u0940, \u0936\u0941\u0930\u094d\u0921\u0930, \u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u0915\u093f\u0938\u094d\u091f\u0940 \u092d\u0940 \u0916\u0923\u0938\u0930 \u0915\u0947 \u091c\u093e\u091c \u0915\u0930 \u0906\u0908\u090f, \u0938\u0930\u0935\u093e\u090f\u0915\u0932, \u092c\u094d\u0930\u0948\u0938\u094d\u091f, \u0914\u0930\u0932",
+        "hi_time_ms": [
+          81000,
+          95000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u092c\u0940\u092a\u0940",
+        "hindi_start": 692,
+        "hindi_end": 696,
+        "confidence": 1.0
+      }
     },
     {
       "span": "cancer",
@@ -1551,7 +1674,23 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever been tested for any cancer"
+      "assertion_context": "Have you ever been tested for any cancer",
+      "hindi_alignment": {
+        "en_time_ms": [
+          88000,
+          92000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u094b \u0915\u092d\u0940 \u092a\u0939\u0932\u0947 \u0915\u0941\u0908 \u0932\u0902\u092d\u0940 \u0935\u093f\u092e\u093e\u0930\u0940 \u0930\u0939\u0940 \u0939\u094b, \u092f\u0947 \u0938\u0947 \u0926\u093e\u090f\u092c\u093f\u091f\u0940, \u092c\u0940\u092a\u0940, \u0936\u0941\u0930\u094d\u0921\u0930, \u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u0915\u093f\u0938\u094d\u091f\u0940 \u092d\u0940 \u0916\u0923\u0938\u0930 \u0915\u0947 \u091c\u093e\u091c \u0915\u0930 \u0906\u0908\u090f, \u0938\u0930\u0935\u093e\u090f\u0915\u0932, \u092c\u094d\u0930\u0948\u0938\u094d\u091f, \u0914\u0930\u0932",
+        "hi_time_ms": [
+          81000,
+          95000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0916\u0923\u0938\u0930",
+        "hindi_start": 725,
+        "hindi_end": 729,
+        "confidence": 1.0
+      }
     },
     {
       "span": "cancer",
@@ -1566,7 +1705,23 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "you ever been tested for any family cancer"
+      "assertion_context": "you ever been tested for any family cancer",
+      "hindi_alignment": {
+        "en_time_ms": [
+          96000,
+          99000
+        ],
+        "hindi_segment": "\u0917\u0930 \u092e\u0947\u0902 \u0915\u093f\u0938\u094d\u091f\u0940 \u0915\u094b \u092d\u0940 \u0915\u092d\u0940 \u092b\u094d\u092f\u093e\u092e\u094d\u0921\u0940 \u092e\u0947\u0902 \u0916\u0923\u0938\u0930?",
+        "hi_time_ms": [
+          97000,
+          99000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0916\u0923\u0938\u0930",
+        "hindi_start": 804,
+        "hindi_end": 808,
+        "confidence": 1.0
+      }
     },
     {
       "span": "cancer",
@@ -1581,7 +1736,23 @@
       },
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "would like to ask questions related to cancer"
+      "assertion_context": "would like to ask questions related to cancer",
+      "hindi_alignment": {
+        "en_time_ms": [
+          145000,
+          151000
+        ],
+        "hindi_segment": "\u0905\u092a \u092e\u0948\u0902 \u0915\u0941\u091b \u0916\u0902\u0938\u0930 \u0915\u0947 \u0932\u093f\u090f \u0930\u093f\u091f\u0947\u091f \u0915\u094b\u0908 \u0938\u093f\u092e\u094d\u091f\u092e\u094d\u0938 \u0939\u094b\u0924\u0947 \u0939\u0948, \u0909\u0902\u0915\u0947 \u0930\u093f\u091f\u0947\u091f \u0915\u0941\u091b\u0928 \u0915\u0941\u091b\u0928 \u092a\u0941\u0937\u0928 \u091a\u093e\u0901\u0902\u0917\u0940",
+        "hi_time_ms": [
+          145000,
+          151000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0916\u0902\u0938\u0930",
+        "hindi_start": 1063,
+        "hindi_end": 1067,
+        "confidence": 1.0
+      }
     },
     {
       "span": "tobacco",
@@ -1596,7 +1767,23 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever been tested for tobacco"
+      "assertion_context": "Have you ever been tested for tobacco",
+      "hindi_alignment": {
+        "en_time_ms": [
+          106000,
+          108000
+        ],
+        "hindi_segment": "\u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u0924\u092e\u093e\u0915\u0941 \u0915\u093e \u0938\u0947\u0935\u0928 \u0915\u093f\u092f\u093e \u0939\u0948, \u0924\u092e\u093e\u0915\u0941 \u0905\u0932\u0915\u094b\u0932?",
+        "hi_time_ms": [
+          103000,
+          111000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0924\u092e\u093e\u0915\u0941",
+        "hindi_start": 864,
+        "hindi_end": 869,
+        "confidence": 1.0
+      }
     },
     {
       "span": "tobacco",
@@ -1611,7 +1798,23 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever been tested for tobacco"
+      "assertion_context": "Have you ever been tested for tobacco",
+      "hindi_alignment": {
+        "en_time_ms": [
+          109000,
+          111000
+        ],
+        "hindi_segment": "\u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u0924\u092e\u093e\u0915\u0941 \u0915\u093e \u0938\u0947\u0935\u0928 \u0915\u093f\u092f\u093e \u0939\u0948, \u0924\u092e\u093e\u0915\u0941 \u0905\u0932\u0915\u094b\u0932?",
+        "hi_time_ms": [
+          103000,
+          111000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0924\u092e\u093e\u0915\u0941",
+        "hindi_start": 864,
+        "hindi_end": 869,
+        "confidence": 1.0
+      }
     },
     {
       "span": "tobacco",
@@ -1626,7 +1829,23 @@
       },
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever been tested for tobacco"
+      "assertion_context": "Have you ever been tested for tobacco",
+      "hindi_alignment": {
+        "en_time_ms": [
+          117000,
+          119000
+        ],
+        "hindi_segment": "\u0905\u092a\u0928\u0947 \u0915\u092d\u0940 \u092c\u0940 \u0924\u092e\u093e\u0915\u0941 \u0915\u093e \u0938\u0947\u0935\u0928 \u0915\u093f\u092f\u093e \u0939\u0948?",
+        "hi_time_ms": [
+          117000,
+          120000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u0924\u092e\u093e\u0915\u0941",
+        "hindi_start": 894,
+        "hindi_end": 899,
+        "confidence": 1.0
+      }
     },
     {
       "span": "mixed",
@@ -1636,7 +1855,23 @@
       "ontology_grounding": null,
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Are you a shaka Hari or mixed"
+      "assertion_context": "Are you a shaka Hari or mixed",
+      "hindi_alignment": {
+        "en_time_ms": [
+          122000,
+          124000
+        ],
+        "hindi_segment": "\u0905\u092a \u0936\u093e\u0915\u093e \u0939\u093e\u0930\u0940 \u0939\u0948, \u092f\u093e \u092e\u093f\u0915\u094d\u0938 \u0932\u0947\u0924\u0947 \u0939\u0948?",
+        "hi_time_ms": [
+          122000,
+          125000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u092e\u093f\u0915\u094d\u0938",
+        "hindi_start": 942,
+        "hindi_end": 947,
+        "confidence": 1.0
+      }
     },
     {
       "span": "father",
@@ -1644,9 +1879,25 @@
       "end": 386,
       "entity_type": "FAMILY_MEMBER",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "What is your father 's name"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "What is your father 's name",
+      "hindi_alignment": {
+        "en_time_ms": [
+          41000,
+          42000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u093e \u092c\u0930\u0947\u0932\u0940 \u0915\u0930 \u0939\u0948 \u0928\u0935\u0930\u093e \u092e\u0941\u091d\u093e \u0905\u092a\u0915\u0940 \u092a\u093f\u0924\u093e \u0915\u093e \u0928\u093e\u092e? \u092c\u092c\u0935\u093e\u0901\u0928 \u0926\u093e\u0936\u094d\u0935\u0932\u094d\u092e\u093e",
+        "hi_time_ms": [
+          38000,
+          44000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u092a\u093f\u0924\u093e",
+        "hindi_start": 374,
+        "hindi_end": 378,
+        "confidence": 1.0
+      }
     },
     {
       "span": "mother",
@@ -1656,7 +1907,23 @@
       "ontology_grounding": null,
       "assertion": "PRESENT",
       "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "For my mother"
+      "assertion_context": "For my mother",
+      "hindi_alignment": {
+        "en_time_ms": [
+          99000,
+          101000
+        ],
+        "hindi_segment": "\u092e\u092e\u094d\u092e\u0947 \u0915\u094b",
+        "hi_time_ms": [
+          100000,
+          101000
+        ],
+        "method": "lexical",
+        "hindi_span": "\u092e\u092e\u094d\u092e\u0947",
+        "hindi_start": 810,
+        "hindi_end": 815,
+        "confidence": 1.0
+      }
     },
     {
       "span": "last 6 months",
@@ -1666,7 +1933,20 @@
       "ontology_grounding": null,
       "assertion": "UNKNOWN",
       "assertion_reason": "MENTION_IN_QUESTION",
-      "assertion_context": "Have you ever lost weight in the last 6 months"
+      "assertion_context": "Have you ever lost weight in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          151000,
+          154000
+        ],
+        "hindi_segment": "\u0905\u092a\u0915\u093e \u0935\u091c\u0928 \u092a\u093f\u0937\u094d\u0932\u0947 \u091a\u0947 \u092e\u0947\u0902\u0917\u0947 \u092e\u0947\u0902 \u0915\u092d\u0940 \u0915\u092e \u0939\u0942\u0901?",
+        "hi_time_ms": [
+          151000,
+          154000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1674,9 +1954,22 @@
       "end": 1242,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          156000,
+          160000
+        ],
+        "hindi_segment": "\u092a\u093f\u0937\u094d\u0932\u0947 \u091a\u0947 \u092e\u0947\u0902\u0917\u0947 \u092e\u0947\u0902 \u0906\u092a\u0942 \u092d\u0941\u0916\u093e\u0930 \u092f\u0926\u094d\u0916\u093e\u0928 \u0930\u0939\u0940 \u0939\u0942\u0901?",
+        "hi_time_ms": [
+          156000,
+          160000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1684,9 +1977,22 @@
       "end": 1301,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          161000,
+          166000
+        ],
+        "hindi_segment": "\u0915\u0941\u0908 \u0906\u0901\u0938\u093e \u0917\u093e\u0913 \u0936\u0930\u0940\u0930 \u092e\u0947\u0902 \u091c\u094b \u0932\u0902\u092d\u0947 \u0938\u092e\u0925\u0915\u094b \u0914\u0930 \u0924\u0940\u0916 \u0928\u0939\u0942\u0901?",
+        "hi_time_ms": [
+          161000,
+          166000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1694,9 +2000,22 @@
       "end": 1360,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          168000,
+          172000
+        ],
+        "hindi_segment": "\u0936\u0930\u0940\u0930 \u092e\u0947\u0902 \u0915\u0939\u0940 \u092a\u0930 \u0917\u093e\u0902\u091f \u092a\u093f\u0937\u094d\u0932\u0947 \u091a\u0947 \u092e\u0947\u0902\u0917\u0947 \u092e\u0947\u0902 \u0928\u0939\u0940\u0902",
+        "hi_time_ms": [
+          168000,
+          174000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1704,9 +2023,22 @@
       "end": 1419,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          175000,
+          178000
+        ],
+        "hindi_segment": "\u0926\u0930\u094d\u0927 \u092a\u0942 \u0915\u093f\u0938\u0940 \u0915\u093e\u0930\u0928 \u0915\u093f\u0938\u0940 \u092c\u091c\u091c\u093c \u0938\u0947 \u0905\u092a\u0915\u094b \u0930\u0939\u093e \u0939\u0942\u0901?",
+        "hi_time_ms": [
+          175000,
+          179000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1714,9 +2046,22 @@
       "end": 1478,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          182000,
+          185000
+        ],
+        "hindi_segment": "\u0936\u0930\u0940\u0930 \u0915\u093f\u0938\u0940 \u092c\u0940\u0937 \u091c\u0917\u092f \u0938\u0947 \u0906\u092a\u0915\u094b \u092a\u0942\u0930 \u0928\u093f\u0915\u0932\u093e\u0913 \u092a\u093f\u0937\u094d\u0932\u0947 \u091a\u0947 \u092e\u0947\u0902\u0917\u0947 \u092e\u0947\u0902",
+        "hi_time_ms": [
+          182000,
+          187000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1724,9 +2069,22 @@
       "end": 1537,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          188000,
+          190000
+        ],
+        "hindi_segment": "\u0932\u0902\u092d\u0947 \u0938\u092e\u0925\u0915\u0940 \u092e\u093e\u0930\u0940 \u0924\u094b \u0905\u092a\u0915\u094b \u0928\u0939\u0940\u0902",
+        "hi_time_ms": [
+          188000,
+          190000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1734,9 +2092,22 @@
       "end": 1596,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          192000,
+          194000
+        ],
+        "hindi_segment": "\u092e\u0941\u0917 \u0916\u094b\u0932\u0947 \u092e\u0947\u0902 \u0906\u092a\u0915\u094b \u0915\u092d\u0940 \u0924\u0915\u094d\u0932\u0940\u092b \u0930\u0939\u0940 \u0939\u0942\u0901? \u092e\u0941\u091d \u092e\u0947\u0902 \u0932\u093e\u0932 \u092f\u093e \u0938\u092a\u093f\u0925\u0915\u0932\u093e\u0913 \u0915\u093e \u0917\u093e\u0913",
+        "hi_time_ms": [
+          191000,
+          199000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1744,9 +2115,22 @@
       "end": 1655,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          196000,
+          198000
+        ],
+        "hindi_segment": "\u092e\u0941\u0917 \u0916\u094b\u0932\u0947 \u092e\u0947\u0902 \u0906\u092a\u0915\u094b \u0915\u092d\u0940 \u0924\u0915\u094d\u0932\u0940\u092b \u0930\u0939\u0940 \u0939\u0942\u0901? \u092e\u0941\u091d \u092e\u0947\u0902 \u0932\u093e\u0932 \u092f\u093e \u0938\u092a\u093f\u0925\u0915\u0932\u093e\u0913 \u0915\u093e \u0917\u093e\u0913",
+        "hi_time_ms": [
+          191000,
+          199000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1754,9 +2138,22 @@
       "end": 1714,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          201000,
+          204000
+        ],
+        "hindi_segment": "\u0915\u0941\u0908 \u0906\u0938\u093e \u0917\u093e\u0913 \u092e\u0941\u091d \u092e\u0947\u0902 \u091c\u094b \u092a\u093f\u0937\u094d\u0932\u0947 \u0921\u094b \u0939\u092c\u0924\u0947 \u092e\u0947\u0902 \u0915\u092d\u0940 \u0920\u0940\u0915 \u0928\u0939\u0942\u0901?",
+        "hi_time_ms": [
+          200000,
+          204000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1764,9 +2161,22 @@
       "end": 1773,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          207000,
+          209000
+        ],
+        "hindi_segment": "\u0915\u092d\u0940 \u091a\u092c \u0906\u0928\u0947 \u092e\u0947\u0902 \u092f\u093e\u0938\u0947 \u0915\u094b \u0926\u093f\u0915\u0926 \u0930\u0939\u0940 \u0939\u0942\u0901?",
+        "hi_time_ms": [
+          207000,
+          211000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     },
     {
       "span": "last 6 months",
@@ -1774,9 +2184,22 @@
       "end": 1832,
       "entity_type": "DURATION",
       "ontology_grounding": null,
-      "assertion": "PRESENT",
-      "assertion_reason": "MENTION_WITHOUT_NEGATION",
-      "assertion_context": "ever been sick or tired in the last 6 months"
+      "assertion": "UNKNOWN",
+      "assertion_reason": "MENTION_IN_QUESTION",
+      "assertion_context": "ever been sick or tired in the last 6 months",
+      "hindi_alignment": {
+        "en_time_ms": [
+          210000,
+          212000
+        ],
+        "hindi_segment": "\u0915\u092d\u0940 \u091a\u092c \u0906\u0928\u0947 \u092e\u0947\u0902 \u092f\u093e\u0938\u0947 \u0915\u094b \u0926\u093f\u0915\u0926 \u0930\u0939\u0940 \u0939\u0942\u0901?",
+        "hi_time_ms": [
+          207000,
+          211000
+        ],
+        "method": "segment",
+        "reason": "NO_LEXICON_ENTRY"
+      }
     }
   ],
   "relations": [
@@ -1790,19 +2213,9 @@
         "span": "mother",
         "type": "FAMILY_MEMBER"
       },
-      "assertion": "UNKNOWN"
-    },
-    {
-      "relation_type": "FamilyHistory_Of",
-      "head": {
-        "span": "cancer",
-        "type": "CANCER_TYPE"
-      },
-      "tail": {
-        "span": "mother",
-        "type": "FAMILY_MEMBER"
-      },
-      "assertion": "UNKNOWN"
+      "assertion": "PRESENT",
+      "evidence": "For my mother",
+      "assertion_source": "form_answer"
     },
     {
       "relation_type": "Status_Of",
@@ -1835,5 +2248,14 @@
       }
     }
   ],
+  "alignment_summary": {
+    "entities": 30,
+    "lexical": 11,
+    "segment": 19,
+    "unaligned": 0,
+    "lexical_rate": 0.367,
+    "hindi_segments": 56,
+    "hallucinated_hindi_segments": 0
+  },
   "ontology_grounded_count": 7
 }

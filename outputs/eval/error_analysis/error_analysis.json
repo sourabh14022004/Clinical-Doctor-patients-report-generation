@@ -1,0 +1,287 @@
+{
+  "stages": {
+    "A": "Lost in ASR (absent from Hindi and English)",
+    "B": "Lost in translation (in Hindi, not in English)",
+    "C": "Missed by question matching (in English, no question matched)",
+    "D": "Answer not classified (question matched, answer unclear)"
+  },
+  "counts": {
+    "C": 9,
+    "A": 20,
+    "B": 5
+  },
+  "rows": [
+    {
+      "case": "Praveen",
+      "field": "Past tobacco or alcohol use",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": true,
+      "topic_in_english": true
+    },
+    {
+      "case": "Praveen",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": false,
+      "topic_in_english": true
+    },
+    {
+      "case": "Praveen",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Praveen",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "stage": "B",
+      "topic_in_hindi": true,
+      "topic_in_english": false
+    },
+    {
+      "case": "Praveen",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "stage": "B",
+      "topic_in_hindi": true,
+      "topic_in_english": false
+    },
+    {
+      "case": "Praveen",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Praveen",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Praveen",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": true,
+      "topic_in_english": true
+    },
+    {
+      "case": "Praveen",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Praveen",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Priyanshi",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": true,
+      "topic_in_english": true
+    },
+    {
+      "case": "Priyanshi",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "stage": "B",
+      "topic_in_hindi": true,
+      "topic_in_english": false
+    },
+    {
+      "case": "Swarnima",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": false,
+      "topic_in_english": true
+    },
+    {
+      "case": "Swarnima",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": false,
+      "topic_in_english": true
+    },
+    {
+      "case": "Swarnima",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Swarnima",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "stage": "B",
+      "topic_in_hindi": true,
+      "topic_in_english": false
+    },
+    {
+      "case": "Swarnima",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Swarnima",
+      "field": "Known chronic illness",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": true,
+      "topic_in_english": true
+    },
+    {
+      "case": "Swarnima",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Swarnima",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": false,
+      "topic_in_english": true
+    },
+    {
+      "case": "Swarnima",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Swarnima",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Past tobacco or alcohol use",
+      "gold": "ABSENT",
+      "stage": "C",
+      "topic_in_hindi": false,
+      "topic_in_english": true
+    },
+    {
+      "case": "Uday",
+      "field": "Current tobacco use",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Unexplained weight loss",
+      "gold": "ABSENT",
+      "stage": "B",
+      "topic_in_hindi": true,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Persistent fever or fatigue",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Non-healing ulcer or wound",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Lump or swelling",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Persistent pain",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Bleeding from any site",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Difficulty opening mouth",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "White or red oral patch",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Oral ulcer over two weeks",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    },
+    {
+      "case": "Uday",
+      "field": "Difficulty chewing or swallowing",
+      "gold": "ABSENT",
+      "stage": "A",
+      "topic_in_hindi": false,
+      "topic_in_english": false
+    }
+  ]
+}

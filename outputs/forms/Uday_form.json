@@ -44,7 +44,9 @@
       "cancer_type": null,
       "relative": null,
       "assertion": "ABSENT",
-      "evidence": "No. It happened in a relative. But at the end of the day, I found out about it"
+      "evidence": "No. It happened in a relative. But at the end of the day, I found out about it",
+      "needs_review": true,
+      "review_note": "Answer denies family history but also mentions a relative; confirm with patient."
     },
     "consumed_tobacco_or_alcohol": {
       "present": null,
